@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">hito_memo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_fragment_main">編集</string>
+    <string name="navigate_to_fragment_new_folder">フォルダ</string>
+    <string name="cancel_add_person">キャンセル</string>
+    <string name="add_person">追加</string>
+    <string name="cancel_new_folder">キャンセル</string>
+    <string name="title_new_folder">新規フォルダ</string>
+    <string name="complete_new_folder">完了</string>
+    <string name="edit_name_of_new_folder">新規フォルダ</string>
+    <string name="title_setting">設定</string>
+</resources>

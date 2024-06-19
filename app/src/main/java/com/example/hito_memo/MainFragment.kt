@@ -1,0 +1,52 @@
+package com.example.hito_memo
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.navigation.fragment.NavHostFragment
+import com.example.hito_memo.databinding.FragmentMainBinding
+
+class MainFragment : Fragment() {
+
+    private var _binding: FragmentMainBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentMainBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val navHostFragment = requireActivity().supportFragmentManager.findFragmentById(R.id.fragment_main) as NavHostFragment?
+        val navController = navHostFragment?.navController
+
+        binding.settingButton.setOnClickListener {
+            navController?.navigate(R.id.action_mainFragment_to_settingFragment)
+        }
+
+        binding.newFolderButton.setOnClickListener {
+            navController?.navigate(R.id.fragment_new_folder)
+        }
+
+//        binding.addPersonButton.setOnClickListener {
+//            navController?.navigate(R.id.action_mainFragment_to_addPersonFragment)
+//        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+}
