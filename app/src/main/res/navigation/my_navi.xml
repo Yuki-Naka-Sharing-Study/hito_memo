@@ -24,15 +24,27 @@
         android:id="@+id/settingFragment"
         android:name="com.example.hito_memo.SettingFragment"
         android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" />
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/newFolderFragment"
         android:name="com.example.hito_memo.NewFolderFragment"
         android:label="fragment_new_folder"
-        tools:layout="@layout/fragment_new_folder" />
+        tools:layout="@layout/fragment_new_folder" >
+        <action
+            android:id="@+id/action_newFolderFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/addPersonFragment"
         android:name="com.example.hito_memo.AddPersonFragment"
         android:label="fragment_add_person"
-        tools:layout="@layout/fragment_add_person" />
+        tools:layout="@layout/fragment_add_person" >
+        <action
+            android:id="@+id/action_addPersonFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>

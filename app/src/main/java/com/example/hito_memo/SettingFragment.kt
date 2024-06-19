@@ -14,10 +14,6 @@ class SettingFragment : Fragment() {
     private var _binding: FragmentSettingBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,8 +25,10 @@ class SettingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val navController = findNavController()
+
         binding.closeSettingViewButton.setOnClickListener {
-            this.findNavController().navigate(R.id.fragment_main)
+            navController.navigate(R.id.action_settingFragment_to_mainFragment)
         }
     }
 

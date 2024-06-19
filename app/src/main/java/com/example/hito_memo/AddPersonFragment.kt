@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.hito_memo.databinding.FragmentAddPersonBinding
 
 class AddPersonFragment : Fragment() {
@@ -12,14 +13,10 @@ class AddPersonFragment : Fragment() {
     private var _binding: FragmentAddPersonBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentAddPersonBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -27,12 +24,14 @@ class AddPersonFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.textViewCancelAddPerson.setOnClickListener {
+        val navController = findNavController()
 
+        binding.textViewCancelAddPerson.setOnClickListener {
+            navController.navigate(R.id.action_addPersonFragment_to_mainFragment)
         }
 
         binding.textViewAddPerson.setOnClickListener {
-
+            navController.navigate(R.id.action_addPersonFragment_to_mainFragment)
         }
     }
 

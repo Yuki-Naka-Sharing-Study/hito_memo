@@ -5,16 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.hito_memo.databinding.FragmentNewFolderBinding
 
 class NewFolderFragment : Fragment() {
 
     private var _binding: FragmentNewFolderBinding? = null
     private val binding get() = _binding!!
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,12 +24,14 @@ class NewFolderFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.textViewCancelNewFolder.setOnClickListener {
+        val navController = findNavController()
 
+        binding.textViewCancelNewFolder.setOnClickListener {
+            navController.navigate(R.id.action_newFolderFragment_to_mainFragment)
         }
 
         binding.textViewCompleteNewFolder.setOnClickListener {
-
+            navController.navigate(R.id.action_newFolderFragment_to_mainFragment)
         }
     }
 
