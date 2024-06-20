@@ -50,10 +50,14 @@
         android:id="@+id/toggle_button_profile_and_memo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         app:layout_constraintTop_toBottomOf="@id/image_view_add_image_of_person"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+
         android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         >
 
         <com.google.android.material.button.MaterialButton
@@ -82,11 +86,14 @@
         android:id="@+id/scroll_view_of_profile_and_memo"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@drawable/rounded_background"
+        android:layerType="software"
 
         app:layout_constraintTop_toBottomOf="@id/toggle_button_profile_and_memo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+
         android:layout_marginTop="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
@@ -96,7 +103,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -150,6 +158,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="住所"
+
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 />
@@ -242,7 +251,5 @@
         </LinearLayout>
 
     </ScrollView>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
