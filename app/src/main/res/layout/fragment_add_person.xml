@@ -6,13 +6,16 @@
     android:id="@+id/fragment_add_person"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".AddPersonFragment">
 
     <TextView
         android:id="@+id/text_view_cancel_add_person"
-        android:layout_width="72dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/cancel_add_person"
+        android:textSize="16sp"
+        android:textColor="#00AEEF"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="16dp"
@@ -21,13 +24,225 @@
 
     <TextView
         android:id="@+id/text_view_add_person"
-        android:layout_width="36dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/add_person"
+        android:textSize="16sp"
+        android:textColor="#00AEEF"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         />
+
+    <ImageView
+        android:id="@+id/image_view_add_image_of_person"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/add_image_of_person"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="72dp"
+        />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggle_button_profile_and_memo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/image_view_add_image_of_person"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="12dp"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:text="プロフィール"
+            android:textColor="@color/white"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:text="メモ"
+            android:textColor="@color/white"
+            />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <ScrollView
+        android:id="@+id/scroll_view_of_profile_and_memo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toBottomOf="@id/toggle_button_profile_and_memo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名前"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="フリガナ"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ニックネーム"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性別"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="誕生日"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="出身地"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="住所"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="職業"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="関係"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="フォルダ"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="電話番号"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X(旧Twitter)"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instagram"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facebook"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="カスタム1"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="カスタム2"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="カスタム3"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

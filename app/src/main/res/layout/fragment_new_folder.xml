@@ -6,13 +6,16 @@
     android:id="@+id/fragment_new_folder"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".NewFolderFragment">
 
     <TextView
         android:id="@+id/text_view_cancel_new_folder"
-        android:layout_width="72dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/cancel_new_folder"
+        android:textSize="16sp"
+        android:textColor="#00AEEF"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="16dp"
@@ -21,9 +24,12 @@
 
     <TextView
         android:id="@+id/title_new_folder"
-        android:layout_width="88dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/title_new_folder"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -32,9 +38,11 @@
 
     <TextView
         android:id="@+id/text_view_complete_new_folder"
-        android:layout_width="36dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/complete_new_folder"
+        android:textSize="16sp"
+        android:textColor="#00AEEF"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="16dp"

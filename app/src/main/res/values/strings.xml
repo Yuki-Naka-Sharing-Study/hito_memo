@@ -11,4 +11,6 @@
     <string name="complete_new_folder">完了</string>
     <string name="edit_name_of_new_folder">新規フォルダ</string>
     <string name="title_setting">設定</string>
+    <string name="profile_of_toggle_button">プロフィール</string>
+    <string name="memo_of_toggle_button">メモ</string>
 </resources>

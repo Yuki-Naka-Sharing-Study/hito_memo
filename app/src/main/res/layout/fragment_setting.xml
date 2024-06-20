@@ -6,6 +6,7 @@
     android:id="@+id/fragment_setting"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".SettingFragment"
     >
 
@@ -25,6 +26,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_setting"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
