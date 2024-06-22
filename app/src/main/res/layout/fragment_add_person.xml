@@ -116,13 +116,15 @@
                 android:text="名前"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingTop="4dp"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -132,13 +134,14 @@
                 android:text="フリガナ"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -148,13 +151,14 @@
                 android:text="ニックネーム"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -164,13 +168,14 @@
                 android:text="性別"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -180,13 +185,14 @@
                 android:text="誕生日"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -196,13 +202,14 @@
                 android:text="出身地"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -210,16 +217,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="住所"
-
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -229,13 +236,14 @@
                 android:text="職業"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -245,13 +253,14 @@
                 android:text="関係"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -261,13 +270,14 @@
                 android:text="フォルダ"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -277,13 +287,14 @@
                 android:text="電話番号"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -293,13 +304,14 @@
                 android:text="Email"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -309,13 +321,14 @@
                 android:text="X(旧Twitter)"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -325,13 +338,14 @@
                 android:text="Instagram"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -341,13 +355,14 @@
                 android:text="Facebook"
                 android:textSize="16sp"
                 android:textColor="@color/white"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -356,13 +371,14 @@
                 android:layout_height="wrap_content"
                 android:hint="カスタム1"
                 android:textSize="16sp"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -371,13 +387,14 @@
                 android:layout_height="wrap_content"
                 android:hint="カスタム2"
                 android:textSize="16sp"
+                android:paddingHorizontal="16dp"
                 />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="8sp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:background="#999999"
                 />
 
@@ -386,6 +403,7 @@
                 android:layout_height="wrap_content"
                 android:hint="カスタム3"
                 android:textSize="16sp"
+                android:paddingHorizontal="16dp"
                 />
 
         </LinearLayout>
