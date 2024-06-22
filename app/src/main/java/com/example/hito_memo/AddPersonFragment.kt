@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isGone
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.example.hito_memo.databinding.FragmentAddPersonBinding
 
@@ -40,21 +41,15 @@ class AddPersonFragment : Fragment() {
         binding.toggleButtonProfileAndMemo.addOnButtonCheckedListener { materialButtonToggleGroup, checkedId, isChecked ->
             if (isChecked) {
                 when (checkedId) {
-                    R.id.toggle_button_profile -> showProfile()
-                    R.id.toggle_button_memo -> showMemo()
+                    R.id.toggle_button_profile -> {
+                        binding.scrollViewOfProfileAndMemo.isVisible = isChecked
+                    }
+                    R.id.toggle_button_memo -> {
+                        binding.editTextMemoOfPerson.isVisible = isChecked
+                    }
                 }
             }
         }
-    }
-
-    private fun showProfile() {
-        binding.scrollViewOfProfileAndMemo.visibility = View.VISIBLE
-        binding.editTextMemoOfPerson.visibility = View.GONE
-    }
-
-    private fun showMemo() {
-        binding.editTextMemoOfPerson.visibility = View.VISIBLE
-        binding.scrollViewOfProfileAndMemo.visibility = View.GONE
     }
 
     override fun onDestroyView() {
