@@ -109,7 +109,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="名前"
@@ -119,7 +118,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="田中太郎"
                     android:textSize="16sp" />
 
@@ -148,7 +147,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="タナカタロウ"
                     android:textSize="16sp" />
 
@@ -177,7 +176,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="たろちゃん"
                     android:textSize="16sp" />
 
@@ -206,7 +205,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="未選択"
                     android:textSize="16sp" />
 
@@ -235,7 +234,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="2000年1月1日"
                     android:textSize="16sp" />
 
@@ -264,7 +263,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="秋田県"
                     android:textSize="16sp" />
 
@@ -293,7 +292,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="東京都"
                     android:textSize="16sp" />
 
@@ -322,7 +321,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="エンジニア"
                     android:textSize="16sp" />
 
@@ -351,7 +350,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="会社の同僚"
                     android:textSize="16sp" />
 
@@ -380,7 +379,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="未選択"
                     android:textSize="16sp" />
 
@@ -409,7 +408,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="080-1234-1234"
                     android:textSize="16sp" />
 
@@ -438,7 +437,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="taro@example.com"
                     android:textSize="16sp" />
 
@@ -467,7 +466,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="tanakataro"
                     android:textSize="16sp" />
 
@@ -496,7 +495,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="tanakataro"
                     android:textSize="16sp" />
 
@@ -525,7 +524,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="tanakataro"
                     android:textSize="16sp" />
 
@@ -553,7 +552,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="内容"
                     android:textSize="16sp" />
 
@@ -581,7 +580,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="内容"
                     android:textSize="16sp" />
 
@@ -609,7 +608,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:background="@null"
                     android:hint="内容"
                     android:textSize="16sp" />
 
