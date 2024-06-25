@@ -30,6 +30,15 @@ class MainFragment : Fragment() {
             navController.navigate(R.id.action_mainFragment_to_settingFragment)
         }
 
+        binding.textViewEdit.setOnClickListener {
+            // 作成済みフォルダの編集
+            if (binding.textViewEdit.text.equals("編集")) {
+                binding.textViewEdit.setText("完了")
+            } else {
+                binding.textViewEdit.text = "編集"
+            }
+        }
+
         binding.newFolderButton.setOnClickListener {
             navController.navigate(R.id.action_mainFragment_to_newFolderFragment)
         }
