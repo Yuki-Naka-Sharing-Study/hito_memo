@@ -33,6 +33,10 @@ class NewFolderFragment : Fragment() {
         binding.textViewCompleteNewFolder.setOnClickListener {
             navController.navigate(R.id.action_newFolderFragment_to_mainFragment)
         }
+
+        binding.cancelNewFolderButton.setOnClickListener {
+            binding.editTextAddNewFolder.setText("")
+        }
     }
 
     override fun onDestroyView() {
