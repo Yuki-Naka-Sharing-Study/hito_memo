@@ -39,6 +39,10 @@ class SettingFragment : Fragment() {
         binding.closeSettingViewButton.setOnClickListener {
             navController.navigate(R.id.action_settingFragment_to_mainFragment)
         }
+
+        binding.hitoMemoProView.setOnClickListener {
+            navController.navigate(R.id.action_settingFragment_to_hitoMemoFragment)
+        }
     }
 
     override fun onDestroyView() {
