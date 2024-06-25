@@ -1,5 +1,6 @@
 package com.example.hito_memo
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -30,8 +31,21 @@ class NewFolderFragment : Fragment() {
             navController.navigate(R.id.action_newFolderFragment_to_mainFragment)
         }
 
+        // 「cancelNewFolderButton」をタップして文字列を削除した状態で
+        // 「textViewCompleteNewFolder」をタップしても「AlertDialog」が表示されない。
         binding.textViewCompleteNewFolder.setOnClickListener {
-            navController.navigate(R.id.action_newFolderFragment_to_mainFragment)
+            if (binding.editTextAddNewFolder.text.equals("")) {
+                AlertDialog.Builder(requireContext())
+                    .setTitle("別の名前を選択してください。")
+                    .setMessage("フォルダ名は空白にできません。")
+                    .setPositiveButton("OK", { dialog, which ->
+                        // TODO:Yesが押された時の挙動
+
+                    })
+                    .show()
+            } else {
+                navController.navigate(R.id.action_newFolderFragment_to_mainFragment)
+            }
         }
 
         binding.cancelNewFolderButton.setOnClickListener {
