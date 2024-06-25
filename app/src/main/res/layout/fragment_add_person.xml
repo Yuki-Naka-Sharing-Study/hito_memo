@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_add_person"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".AddPersonFragment">
+    android:background="#f8f8ff"
+    tools:context=".AddPersonFragment"
+    >
 
     <TextView
         android:id="@+id/text_view_cancel_add_person"
@@ -15,10 +17,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/cancel_add_person"
-        android:textColor="#00AEEF"
+        android:textColor="#4169e1"
         android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/text_view_add_person"
@@ -27,10 +30,11 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="@string/add_person"
-        android:textColor="#00AEEF"
+        android:textColor="#4169e1"
         android:textSize="16sp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <ImageView
         android:id="@+id/image_view_add_image_of_person"
@@ -40,7 +44,8 @@
         android:src="@drawable/add_image_of_person"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <com.google.android.material.button.MaterialButtonToggleGroup
         android:id="@+id/toggle_button_profile_and_memo"
@@ -50,7 +55,7 @@
 
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/rounded_background"
+        android:background="@drawable/rounded_background_white"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -64,7 +69,8 @@
             android:layout_weight="1"
             android:minWidth="0dp"
             android:text="プロフィール"
-            android:textColor="@color/white" />
+            android:textColor="@color/black"
+            />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/toggle_button_memo"
@@ -74,7 +80,8 @@
             android:layout_weight="1"
             android:minWidth="0dp"
             android:text="メモ"
-            android:textColor="@color/white" />
+            android:textColor="@color/black"
+            />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -86,7 +93,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/rounded_background"
+        android:background="@drawable/rounded_background_white"
         android:layerType="software"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,7 +120,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="名前"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/name_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/name_constraint_orientation_horizontal_scrollview" />
@@ -160,7 +167,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="フリガナ"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/hurigana_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/hurigana_constraint_orientation_horizontal_scrollview" />
@@ -207,7 +214,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="ニックネーム"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/nickname_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/nickname_constraint_orientation_horizontal_scrollview" />
@@ -254,7 +261,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="性別"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/sex_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/sex_constraint_orientation_horizontal_scrollview" />
@@ -301,7 +308,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="誕生日"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/birthday_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/birthday_constraint_orientation_horizontal_scrollview" />
@@ -348,7 +355,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="出身地"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/origin_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/origin_constraint_orientation_horizontal_scrollview" />
@@ -395,7 +402,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="住所"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/address_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/address_constraint_orientation_horizontal_scrollview" />
@@ -442,7 +449,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="職業"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/occupation_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/occupation_constraint_orientation_horizontal_scrollview" />
@@ -489,7 +496,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="関係"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/relationship_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/relationship_constraint_orientation_horizontal_scrollview" />
@@ -536,7 +543,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="フォルダ"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/folder_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/folder_constraint_orientation_horizontal_scrollview" />
@@ -583,7 +590,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="電話番号"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/telephone_number_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/telephone_number_constraint_orientation_horizontal_scrollview" />
@@ -630,7 +637,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="Email"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/email_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/email_constraint_orientation_horizontal_scrollview" />
@@ -677,7 +684,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="X(旧 Twitter)"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/x_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/x_constraint_orientation_horizontal_scrollview" />
@@ -724,7 +731,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="Instagram"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/instagram_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/instagram_constraint_orientation_horizontal_scrollview" />
@@ -771,7 +778,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="Facebook"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/facebook_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/facebook_constraint_orientation_horizontal_scrollview" />
@@ -818,7 +825,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="カスタム1"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/custom1_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/custom1_constraint_orientation_horizontal_scrollview" />
@@ -865,7 +872,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="カスタム2"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/custom2_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/custom2_constraint_orientation_horizontal_scrollview" />
@@ -912,7 +919,7 @@
                     android:paddingHorizontal="16dp"
                     android:paddingTop="4dp"
                     android:text="カスタム3"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintLeft_toLeftOf="@+id/custom3_constraint_orientation_horizontal_scrollview"
                     app:layout_constraintTop_toTopOf="@+id/custom3_constraint_orientation_horizontal_scrollview" />
@@ -959,7 +966,7 @@
         android:layout_marginEnd="16dp"
 
         android:layout_marginBottom="16dp"
-        android:background="@drawable/rounded_background"
+        android:background="@drawable/rounded_background_white"
         android:layerType="software"
         android:visibility="gone"
 
