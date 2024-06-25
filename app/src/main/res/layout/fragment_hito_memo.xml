@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:background="#f8f8ff"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".HitoMemoFragment">
+    tools:context=".HitoMemoFragment"
+    >
 
     <ImageButton
         android:id="@+id/back_to_setting_view_image_button"
@@ -151,6 +152,19 @@
         android:layout_marginStart="28dp"
         />
 
+    <TextView
+        android:id="@+id/monthly_plan_yen_mark"
+        android:text="¥"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/monthly_plan_view"
+        app:layout_constraintRight_toRightOf="@+id/monthly_plan_view"
+        app:layout_constraintBottom_toBottomOf="@+id/monthly_plan_view"
+        android:layout_marginEnd="80dp"
+        />
+
     <View
         android:id="@+id/yearly_plan_view"
         android:background="@drawable/rounded_background_blue"
@@ -178,9 +192,74 @@
         android:layout_marginStart="28dp"
         />
 
+    <TextView
+        android:id="@+id/monthly_plan_yen_num"
+        android:text="500"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/monthly_plan_view"
+        app:layout_constraintLeft_toRightOf="@+id/monthly_plan_yen_mark"
+        app:layout_constraintBottom_toBottomOf="@+id/monthly_plan_view"
+        android:layout_marginEnd="80dp"
+        />
+
+    <TextView
+        android:id="@+id/monthly_plan_month"
+        android:text="/月"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/monthly_plan_view"
+        app:layout_constraintLeft_toRightOf="@+id/monthly_plan_yen_num"
+        app:layout_constraintBottom_toBottomOf="@+id/monthly_plan_view"
+        android:layout_marginEnd="80dp"
+        />
+
+    <TextView
+        android:id="@+id/yearly_plan_yen_num"
+        android:text="5000"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/yearly_plan_view"
+        app:layout_constraintLeft_toRightOf="@+id/yearly_plan_yen_mark"
+        app:layout_constraintBottom_toBottomOf="@+id/yearly_plan_view"
+        android:layout_marginEnd="80dp"
+        />
+
+    <TextView
+        android:id="@+id/yearly_plan_year"
+        android:text="/年"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/yearly_plan_view"
+        app:layout_constraintLeft_toRightOf="@+id/yearly_plan_yen_num"
+        app:layout_constraintBottom_toBottomOf="@+id/yearly_plan_view"
+        android:layout_marginEnd="80dp"
+        />
+
+    <TextView
+        android:id="@+id/yearly_plan_yen_mark"
+        android:text="¥"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/yearly_plan_view"
+        app:layout_constraintRight_toRightOf="@+id/yearly_plan_view"
+        app:layout_constraintBottom_toBottomOf="@+id/yearly_plan_view"
+        android:layout_marginEnd="80dp"
+        />
+
     <View
         android:id="@+id/konyu_hukugen_view"
-        android:background="#dcdcdc"
+        android:background="@drawable/rounded_background_gray"
         android:layout_width="160dp"
         android:layout_height="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
