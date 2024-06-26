@@ -6,18 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.hito_memo.databinding.FragmentHitoMemoBinding
+import com.example.hito_memo.databinding.FragmentHitoMemoProBinding
 
-class HitoMemoFragment : Fragment() {
+class HitoMemoProFragment : Fragment() {
 
-    private var _binding: FragmentHitoMemoBinding? = null
+    private var _binding: FragmentHitoMemoProBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHitoMemoBinding.inflate(inflater, container, false)
+        _binding = FragmentHitoMemoProBinding.inflate(inflater, container, false)
         return binding.root
     }
 
