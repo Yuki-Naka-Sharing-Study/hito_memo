@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.ImageButton
-import android.widget.TextView
-
+import com.example.hito_memo.databinding.ModelChangeListItemBinding
 
 class ModelChangeAdapter(private val context: Context, private val dataSource: List<String>) : BaseAdapter() {
 
@@ -26,18 +24,25 @@ class ModelChangeAdapter(private val context: Context, private val dataSource: L
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val modelChangeRowView = convertView ?: inflater.inflate(R.layout.model_change_list_item, parent, false)
+        val binding: ModelChangeListItemBinding
+        val view: View
 
-        val modelChangeItemTextView = modelChangeRowView.findViewById(R.id.model_change_item_text_view) as TextView
-        val modelChangeItemImageButton = modelChangeRowView.findViewById(R.id.model_change_item_image_button) as ImageButton
+        if (convertView == null) {
+            binding = ModelChangeListItemBinding.inflate(inflater, parent, false)
+            view = binding.root
+            view.tag = binding
+        } else {
+            binding = convertView.tag as ModelChangeListItemBinding
+            view = convertView
+        }
 
         val modelChangeItem = getItem(position) as String
-        modelChangeItemTextView.text = modelChangeItem
+        binding.modelChangeItemTextView.text = modelChangeItem
 
-        modelChangeItemImageButton.setOnClickListener {
+        binding.modelChangeItemImageButton.setOnClickListener {
             // ボタンがクリックされたときの動作をここに追加
         }
 
-        return modelChangeRowView
+        return view
     }
 }

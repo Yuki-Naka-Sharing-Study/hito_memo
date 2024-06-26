@@ -1,14 +1,11 @@
 package com.example.hito_memo
 
-// SecurityAdapter.kt
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.TextView
-import android.widget.ToggleButton
-
+import com.example.hito_memo.databinding.SecurityListItemBinding
 
 class SecurityAdapter(private val context: Context, private val dataSource: List<String>) : BaseAdapter() {
 
@@ -27,19 +24,25 @@ class SecurityAdapter(private val context: Context, private val dataSource: List
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val securityRowView = convertView ?: inflater.inflate(R.layout.security_list_item, parent, false)
+        val binding: SecurityListItemBinding
+        val view: View
 
-        val securityItemTextView = securityRowView.findViewById(R.id.security_item_text_view) as TextView
-        val securityItemToggleButton = securityRowView.findViewById(R.id.security_item_toggle_button) as ToggleButton
-
+        if (convertView == null) {
+            binding = SecurityListItemBinding.inflate(inflater, parent, false)
+            view = binding.root
+            view.tag = binding
+        } else {
+            binding = convertView.tag as SecurityListItemBinding
+            view = convertView
+        }
 
         val securityItem = getItem(position) as String
-        securityItemTextView.text = securityItem
+        binding.securityItemTextView.text = securityItem
 
-        securityItemToggleButton.setOnClickListener {
+        binding.securityItemToggleButton.setOnClickListener {
             // ボタンがクリックされたときの動作をここに追加
         }
 
-        return securityRowView
+        return view
     }
 }
