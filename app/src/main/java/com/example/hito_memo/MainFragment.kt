@@ -1,10 +1,10 @@
 package com.example.hito_memo
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.hito_memo.databinding.FragmentMainBinding
 
@@ -30,12 +30,12 @@ class MainFragment : Fragment() {
             navController.navigate(R.id.action_mainFragment_to_settingFragment)
         }
 
-        binding.textViewEdit.setOnClickListener {
+        binding.editFoldersTextView.setOnClickListener {
             // 作成済みフォルダの編集
-            if (binding.textViewEdit.text.equals("編集")) {
-                binding.textViewEdit.setText("完了")
+            if (binding.editFoldersTextView.text.equals("編集")) {
+                binding.editFoldersTextView.setText("完了")
             } else {
-                binding.textViewEdit.text = "編集"
+                binding.editFoldersTextView.text = "編集"
             }
         }
 
