@@ -36,7 +36,25 @@ class HitoMemoProFragment : Fragment() {
             navController.navigate(R.id.action_hitoMemoProFragment_to_settingFragment)
         }
 
+        binding.privacyPolicyTextView.setOnClickListener {
 
+        }
+
+        binding.riyouTextView.setOnClickListener {
+
+        }
+
+        binding.monthlyPlanView.setOnClickListener {
+
+        }
+
+        binding.yearlyPlanView.setOnClickListener {
+
+        }
+
+        binding.konyuHukugenView.setOnClickListener {
+
+        }
     }
 
     override fun onDestroyView() {
