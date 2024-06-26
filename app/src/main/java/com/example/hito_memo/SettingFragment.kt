@@ -25,7 +25,7 @@ class SettingFragment : Fragment() {
         binding.securityListView.adapter = securityAdapter
 
         val modelChangeItems = listOf("機種変更コード発行","機種変更コード入力して復元")
-        val modelChangeAdapter = SecurityAdapter(requireContext(), modelChangeItems)
+        val modelChangeAdapter = ModelChangeAdapter(requireContext(), modelChangeItems)
         binding.modelChangeListView.adapter = modelChangeAdapter
 
         return binding.root

@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.ToggleButton
 
 
 class SecurityAdapter(private val context: Context, private val dataSource: List<String>) : BaseAdapter() {
@@ -30,12 +30,13 @@ class SecurityAdapter(private val context: Context, private val dataSource: List
         val securityRowView = convertView ?: inflater.inflate(R.layout.security_list_item, parent, false)
 
         val securityItemTextView = securityRowView.findViewById(R.id.security_item_text_view) as TextView
-        val securityItemImageButton = securityRowView.findViewById(R.id.security_item_image_button) as ImageButton
+        val securityItemToggleButton = securityRowView.findViewById(R.id.security_item_toggle_button) as ToggleButton
+
 
         val securityItem = getItem(position) as String
         securityItemTextView.text = securityItem
 
-        securityItemImageButton.setOnClickListener {
+        securityItemToggleButton.setOnClickListener {
             // ボタンがクリックされたときの動作をここに追加
         }
 

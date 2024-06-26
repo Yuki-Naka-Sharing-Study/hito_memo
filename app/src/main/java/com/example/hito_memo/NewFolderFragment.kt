@@ -35,13 +35,13 @@ class NewFolderFragment : Fragment() {
         // 「textViewCompleteNewFolder」をタップしても「AlertDialog」が表示されない。
         binding.textViewCompleteNewFolder.setOnClickListener {
             if (binding.editTextAddNewFolder.text.equals("")) {
+
                 AlertDialog.Builder(requireContext())
                     .setTitle("別の名前を選択してください。")
                     .setMessage("フォルダ名は空白にできません。")
-                    .setPositiveButton("OK", { dialog, which ->
-                        // TODO:Yesが押された時の挙動
+                    .setPositiveButton("OK") { _, _ ->
 
-                    })
+                    }
                     .show()
             } else {
                 navController.navigate(R.id.action_newFolderFragment_to_mainFragment)
