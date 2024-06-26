@@ -71,24 +71,14 @@
 
     <TextView
         android:id="@+id/hito_memo_text_view_katakana_in_back_ground"
-        android:text="ヒトメモ"
+        android:text="ヒトメモ\nPRO"
         android:textSize="16sp"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/hito_memo_pro_back_ground_view"
         app:layout_constraintLeft_toRightOf="@+id/hito_memo_pro_image_view"
         app:layout_constraintBottom_toBottomOf="@+id/hito_memo_pro_back_ground_view"
-        android:layout_marginStart="20dp"
-        />
-
-    <TextView
-        android:id="@+id/hito_memo_text_view_alpha_in_back_ground"
-        android:text="PRO"
-        android:textSize="24sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/hito_memo_text_view_katakana_in_back_ground"
-        app:layout_constraintLeft_toRightOf="@id/hito_memo_pro_image_view"
         android:layout_marginStart="20dp"
         />
 
