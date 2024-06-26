@@ -1,10 +1,10 @@
 package com.example.hito_memo
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.hito_memo.databinding.FragmentHitoMemoProBinding
 
@@ -32,12 +32,7 @@ class HitoMemoProFragment : Fragment() {
 
         val navController = findNavController()
 
-        // 以下の二つにbindingは同じ処理をしているがViewで囲ってViewをタップした時に処理を行うようにした方がいいか？
-        binding.backToSettingViewImageButton.setOnClickListener {
-            navController.navigate(R.id.action_hitoMemoProFragment_to_settingFragment)
-        }
-
-        binding.backToSettingViewTextView.setOnClickListener {
+        binding.backToSettingViewView.setOnClickListener {
             navController.navigate(R.id.action_hitoMemoProFragment_to_settingFragment)
         }
 

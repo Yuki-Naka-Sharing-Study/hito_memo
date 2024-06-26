@@ -8,6 +8,14 @@
     tools:context=".HitoMemoProFragment"
     >
 
+    <View
+        android:id="@+id/back_to_setting_view_view"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
     <ImageButton
         android:id="@+id/back_to_setting_view_image_button"
         android:src="@drawable/back"
