@@ -105,7 +105,7 @@
         />
 
     <TextView
-        android:id="@+id/riyou_text_view"
+        android:id="@+id/terms_of_service_text_view"
         android:text="利用規約"
         android:textColor="#0000ff"
         android:layout_width="wrap_content"
@@ -257,7 +257,7 @@
         />
 
     <TextView
-        android:id="@+id/konyu_hukugen_text_view"
+        android:id="@+id/restore_purchase_text_view"
         android:text="購入を復元する"
         android:textSize="16sp"
         android:textColor="#0000ff"

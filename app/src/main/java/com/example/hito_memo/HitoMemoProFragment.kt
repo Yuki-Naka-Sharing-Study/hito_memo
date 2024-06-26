@@ -40,7 +40,7 @@ class HitoMemoProFragment : Fragment() {
 
         }
 
-        binding.riyouTextView.setOnClickListener {
+        binding.termsOfServiceTextView.setOnClickListener {
 
         }
 
@@ -52,7 +52,7 @@ class HitoMemoProFragment : Fragment() {
 
         }
 
-        binding.konyuHukugenView.setOnClickListener {
+        binding.restorePurchaseTextView.setOnClickListener {
 
         }
     }
