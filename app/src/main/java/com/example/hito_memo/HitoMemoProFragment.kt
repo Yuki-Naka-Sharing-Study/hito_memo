@@ -33,7 +33,6 @@ class HitoMemoProFragment : Fragment() {
         val navController = findNavController()
 
         // 以下の二つにbindingは同じ処理をしているがViewで囲ってViewをタップした時に処理を行うようにした方がいいか？
-
         binding.backToSettingViewImageButton.setOnClickListener {
             navController.navigate(R.id.action_hitoMemoProFragment_to_settingFragment)
         }

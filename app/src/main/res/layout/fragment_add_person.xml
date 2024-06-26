@@ -37,7 +37,7 @@
         />
 
     <ImageView
-        android:id="@+id/image_view_add_image_of_person"
+        android:id="@+id/add_image_of_person_image_view_"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="72dp"
@@ -59,7 +59,7 @@
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_view_add_image_of_person">
+        app:layout_constraintTop_toBottomOf="@id/add_image_of_person_image_view_">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/toggle_button_profile"

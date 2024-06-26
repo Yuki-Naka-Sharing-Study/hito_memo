@@ -37,6 +37,10 @@ class AddPersonFragment : Fragment() {
             navController.navigate(R.id.action_addPersonFragment_to_mainFragment)
         }
 
+        binding.addImageOfPersonImageView.setOnClickListener {
+
+        }
+
         // GPTに聞いた感じではこの書き方が合っていそう
         binding.toggleButtonProfileAndMemo.addOnButtonCheckedListener { materialButtonToggleGroup, checkedId, isChecked ->
             if (isChecked) {
