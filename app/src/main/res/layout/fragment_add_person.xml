@@ -959,6 +959,7 @@
 
     <EditText
         android:id="@+id/edit_text_memo_of_person"
+        android:gravity="top|left"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
