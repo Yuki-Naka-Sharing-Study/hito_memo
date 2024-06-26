@@ -19,7 +19,6 @@ class HitoMemoProFragment : Fragment() {
     ): View {
         _binding = FragmentHitoMemoProBinding.inflate(inflater, container, false)
 
-        // セキュリティ
         val hitoMemoProItems = listOf("アプリ内の全広告", "アプリアイコン変更", "3日前、7日前に誕生日通知可能", "プロフィールカスタマイズ機能")
         val hitoMemoProAdapter = HitoMemoProAdapter(requireContext(), hitoMemoProItems)
         binding.hitoMemoProListView.adapter = hitoMemoProAdapter
@@ -52,7 +51,7 @@ class HitoMemoProFragment : Fragment() {
 
         }
 
-        binding.restorePurchaseTextView.setOnClickListener {
+        binding.restorePurchaseView.setOnClickListener {
 
         }
     }

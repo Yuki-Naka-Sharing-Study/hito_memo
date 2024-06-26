@@ -253,7 +253,7 @@
         />
 
     <View
-        android:id="@+id/konyu_hukugen_view"
+        android:id="@+id/restore_purchase_view"
         android:background="@drawable/rounded_background_gray"
         android:layout_width="160dp"
         android:layout_height="36dp"
@@ -271,10 +271,10 @@
         android:textColor="#0000ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/konyu_hukugen_view"
-        app:layout_constraintLeft_toLeftOf="@+id/konyu_hukugen_view"
-        app:layout_constraintRight_toRightOf="@+id/konyu_hukugen_view"
-        app:layout_constraintBottom_toBottomOf="@+id/konyu_hukugen_view"
+        app:layout_constraintTop_toTopOf="@+id/restore_purchase_view"
+        app:layout_constraintLeft_toLeftOf="@+id/restore_purchase_view"
+        app:layout_constraintRight_toRightOf="@+id/restore_purchase_view"
+        app:layout_constraintBottom_toBottomOf="@+id/restore_purchase_view"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
