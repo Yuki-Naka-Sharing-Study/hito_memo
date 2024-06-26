@@ -18,6 +18,12 @@ class HitoMemoProFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHitoMemoProBinding.inflate(inflater, container, false)
+
+        // セキュリティ
+        val hitoMemoProItems = listOf("アプリ内の全広告", "アプリアイコン変更", "3日前、7日前に誕生日通知可能", "プロフィールカスタマイズ機能")
+        val hitoMemoProAdapter = HitoMemoProAdapter(requireContext(), hitoMemoProItems)
+        binding.hitoMemoProListView.adapter = hitoMemoProAdapter
+
         return binding.root
     }
 
@@ -27,7 +33,7 @@ class HitoMemoProFragment : Fragment() {
         val navController = findNavController()
 
         binding.backToSettingViewImageButton.setOnClickListener {
-            navController.navigate(R.id.action_hitoMemoFragment_to_settingFragment)
+            navController.navigate(R.id.action_hitoMemoProFragment_to_settingFragment)
         }
     }
 
