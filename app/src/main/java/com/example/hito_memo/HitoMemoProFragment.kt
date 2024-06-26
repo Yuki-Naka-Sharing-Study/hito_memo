@@ -35,6 +35,8 @@ class HitoMemoProFragment : Fragment() {
         binding.backToSettingViewImageButton.setOnClickListener {
             navController.navigate(R.id.action_hitoMemoProFragment_to_settingFragment)
         }
+
+
     }
 
     override fun onDestroyView() {
