@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_mainFragment_to_addPersonFragment"
             app:destination="@id/addPersonFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_allFolderFragment"
+            app:destination="@id/allFolderFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
@@ -30,7 +33,7 @@
             app:destination="@id/mainFragment" />
         <action
             android:id="@+id/action_settingFragment_to_hitoMemoFragment"
-            app:destination="@id/hitoMemoFragment" />
+            app:destination="@id/hitoMemoProFragment" />
     </fragment>
     <fragment
         android:id="@+id/newFolderFragment"
@@ -51,12 +54,21 @@
             app:destination="@id/mainFragment" />
     </fragment>
     <fragment
-        android:id="@+id/hitoMemoFragment"
+        android:id="@+id/hitoMemoProFragment"
         android:name="com.example.hito_memo.HitoMemoProFragment"
         android:label="fragment_hito_memo"
         tools:layout="@layout/fragment_hito_memo_pro" >
         <action
             android:id="@+id/action_hitoMemoProFragment_to_settingFragment"
             app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allFolderFragment"
+        android:name="com.example.hito_memo.AllFolderFragment"
+        android:label="fragment_all_folder"
+        tools:layout="@layout/fragment_all_folder" >
+        <action
+            android:id="@+id/action_allFolderFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 </navigation>
