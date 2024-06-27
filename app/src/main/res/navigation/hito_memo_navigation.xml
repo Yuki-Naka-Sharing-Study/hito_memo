@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_settingFragment_to_modelChangeCodeIssueFragment"
             app:destination="@id/modelChangeCodeIssueFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_noNotificationFragment"
+            app:destination="@id/noNotificationFragment" />
     </fragment>
     <fragment
         android:id="@+id/newFolderFragment"
@@ -93,6 +96,15 @@
         tools:layout="@layout/fragment_model_change_code_issue" >
         <action
             android:id="@+id/action_modelChangeCodeIssueFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noNotificationFragment"
+        android:name="com.example.hito_memo.NoNotificationFragment"
+        android:label="fragment_no_notification"
+        tools:layout="@layout/fragment_no_notification" >
+        <action
+            android:id="@+id/action_noNotificationFragment_to_settingFragment"
             app:destination="@id/settingFragment" />
     </fragment>
 </navigation>
