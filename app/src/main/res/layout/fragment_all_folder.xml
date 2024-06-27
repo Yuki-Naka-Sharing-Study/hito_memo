@@ -127,9 +127,9 @@
 
     <ImageButton
         android:id="@+id/hito_memo_image_button_in_fragment_all_folder"
+        android:visibility="visible"
         android:src="@drawable/hito_memo_pro_image_view"
         android:background="?android:attr/selectableItemBackground"
-        android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/search_in_all_folder_view"
@@ -141,9 +141,9 @@
 
     <TextView
         android:id="@+id/hito_memo_nothing_in_center_text_view"
+        android:visibility="visible"
         android:text="まだ一人もヒトメモがありません。\n右下のプラスボタンからヒトメモを追加しましょう。"
         android:textColor="#d3d3d3"
-        android:visibility="visible"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center_horizontal"
