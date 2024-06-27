@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f8f8ff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileCustomizeFragment">
+
+    <View
+        android:id="@+id/back_to_all_folder_view_view"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/back_to_all_folder_view_image_button"
+        android:src="@drawable/back"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        />
+
+    <TextView
+        android:id="@+id/back_to_all_folder_view_text_view"
+        android:text="すべて"
+        android:textSize="16sp"
+        android:textColor="#4169e1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/back_to_all_folder_view_image_button"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        />
+
+    <TextView
+        android:id="@+id/name_of_person_in_profile_customize_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        />
+
+    <ImageView
+        android:id="@+id/add_image_of_person_image_view_in_profile_customize_view"
+        android:src="@drawable/add_image_of_person"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="72dp"
+        />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggle_button_profile_and_memory_and_memoin_in_profile_customize_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_background_white"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_image_of_person_image_view_in_profile_customize_view">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/toggle_button_profile_in_profile_customize_view"
+            style="?attr/materialButtonOutlinedStyle"
+            android:text="プロフィール"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/toggle_button__in_memory_customize_view"
+            style="?attr/materialButtonOutlinedStyle"
+            android:text="出来事"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/toggle_button_memo_in_profile_customize_view"
+            style="?attr/materialButtonOutlinedStyle"
+            android:text="メモ"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <ListView
+        android:id="@+id/profile_list_view"
+        android:background="@drawable/rounded_background_white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_button_profile_and_memory_and_memoin_in_profile_customize_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/profile_customize_view"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        />
+
+    <View
+        android:id="@+id/profile_customize_view"
+        android:background="@drawable/rounded_background_gray"
+        android:layout_width="244dp"
+        android:layout_height="36dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginVertical="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_customize_text_view"
+        android:text="プロフィールカスタマイズ"
+        android:textSize="16sp"
+        android:textColor="#4169e1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/profile_customize_view"
+        app:layout_constraintLeft_toLeftOf="@+id/profile_customize_view"
+        app:layout_constraintRight_toLefttOf="@+id/profile_customize_image_button"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_customize_view"
+        android:layout_marginStart="8dp"
+        />
+
+    <ImageButton
+        android:id="@+id/profile_customize_image_button"
+        android:src="@drawable/settings_blue_ver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/profile_customize_view"
+        app:layout_constraintRight_toRightOf="@+id/profile_customize_view"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_customize_view"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
