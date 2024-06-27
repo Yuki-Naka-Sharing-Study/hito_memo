@@ -39,6 +39,32 @@
         android:layout_marginStart="4dp"
         />
 
+    <ImageButton
+        android:id="@+id/order_grid_iamge_button"
+        android:src="@drawable/grid"
+        android:background="?android:attr/selectableItemBackground"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        />
+
+    <ImageButton
+        android:id="@+id/order_list_iamge_button"
+        android:src="@drawable/list"
+        android:background="?android:attr/selectableItemBackground"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        />
+
     <TextView
         android:id="@+id/subete_oomoji_text_view"
         android:text="すべて"
@@ -103,6 +129,7 @@
         android:id="@+id/hito_memo_image_button_in_fragment_all_folder"
         android:src="@drawable/hito_memo_pro_image_view"
         android:background="?android:attr/selectableItemBackground"
+        android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/search_in_all_folder_view"
@@ -116,6 +143,7 @@
         android:id="@+id/hito_memo_nothing_in_center_text_view"
         android:text="まだ一人もヒトメモがありません。\n右下のプラスボタンからヒトメモを追加しましょう。"
         android:textColor="#d3d3d3"
+        android:visibility="visible"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center_horizontal"
@@ -129,6 +157,7 @@
         android:id="@+id/hito_memo_nothing_komoji_text_view"
         android:text="ヒトメモなし"
         android:textSize="8sp"
+        android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
