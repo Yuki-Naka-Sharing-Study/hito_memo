@@ -34,6 +34,12 @@
         <action
             android:id="@+id/action_settingFragment_to_hitoMemoFragment"
             app:destination="@id/hitoMemoProFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_modelChangeCodeEnterFragment"
+            app:destination="@id/modelChangeCodeEnterFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_modelChangeCodeIssueFragment"
+            app:destination="@id/modelChangeCodeIssueFragment" />
     </fragment>
     <fragment
         android:id="@+id/newFolderFragment"
@@ -70,5 +76,23 @@
         <action
             android:id="@+id/action_allFolderFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modelChangeCodeEnterFragment"
+        android:name="com.example.hito_memo.ModelChangeCodeEnterFragment"
+        android:label="fragment_model_change_code_enter"
+        tools:layout="@layout/fragment_model_change_code_enter" >
+        <action
+            android:id="@+id/action_modelChangeCodeEnterFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modelChangeCodeIssueFragment"
+        android:name="com.example.hito_memo.ModelChangeCodeIssueFragment"
+        android:label="fragment_model_change_code_issue"
+        tools:layout="@layout/fragment_model_change_code_issue" >
+        <action
+            android:id="@+id/action_modelChangeCodeIssueFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
     </fragment>
 </navigation>

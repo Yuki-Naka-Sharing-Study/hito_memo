@@ -1,11 +1,10 @@
 package com.example.hito_memo
 
-
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.hito_memo.databinding.FragmentSettingBinding
 
@@ -54,6 +53,11 @@ class SettingFragment : Fragment() {
         binding.hitoMemoProView.setOnClickListener {
             navController.navigate(R.id.action_settingFragment_to_hitoMemoFragment)
         }
+
+        //　以下のコードは一旦仮で作成。おそらく間違っている。
+//        binding.modelChangeListView.setOnClickListener {
+//            navController.navigate(R.id.action_settingFragment_to_modelChangeCodeIssueFragment)
+//        }
     }
 
     override fun onDestroyView() {
