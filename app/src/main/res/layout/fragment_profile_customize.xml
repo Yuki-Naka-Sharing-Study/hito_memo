@@ -128,9 +128,39 @@
         android:layout_marginBottom="16dp"
         />
 
+    <ImageView
+        android:id="@+id/memory_image_view"
+        android:src="@drawable/memory"
+        android:background="?attr/selectableItemBackground"
+        android:visibility="gone"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_button_profile_and_memory_and_memoin_in_profile_customize_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="120dp"
+        />
+
+    <TextView
+        android:id="@+id/memory_nothing_text_view"
+        android:visibility="gone"
+        android:text="まだひとつも出来事がありません。\n下の出来事を追加ボタンから出来事を\n追加しましょう。"
+        android:textSize="12sp"
+        android:textColor="#808080"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/memory_image_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        />
+
     <View
         android:id="@+id/profile_customize_view"
         android:background="@drawable/rounded_background_gray"
+        android:visibility="visible"
         android:layout_width="244dp"
         android:layout_height="36dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -142,6 +172,7 @@
 
     <TextView
         android:id="@+id/profile_customize_text_view"
+        android:visibility="visible"
         android:text="プロフィールカスタマイズ"
         android:textSize="16sp"
         android:textColor="#4169e1"
@@ -156,12 +187,53 @@
 
     <ImageButton
         android:id="@+id/profile_customize_image_button"
+        android:visibility="visible"
         android:src="@drawable/settings_blue_ver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/profile_customize_view"
         app:layout_constraintRight_toRightOf="@+id/profile_customize_view"
         app:layout_constraintBottom_toBottomOf="@+id/profile_customize_view"
+        />
+
+    <View
+        android:id="@+id/add_memory_view"
+        android:visibility="gone"
+        android:background="@drawable/rounded_background_gray"
+        android:layout_width="160dp"
+        android:layout_height="36dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginVertical="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
+        android:id="@+id/add_memory_text_view"
+        android:visibility="gone"
+        android:text="出来事を追加"
+        android:textSize="16sp"
+        android:textColor="#4169e1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/add_memory_view"
+        app:layout_constraintLeft_toLeftOf="@+id/add_memory_view"
+        app:layout_constraintBottom_toBottomOf="@+id/add_memory_view"
+        android:layout_marginStart="16dp"
+        />
+
+    <ImageView
+        android:id="@+id/add_memory_image_view"
+        android:visibility="gone"
+        android:src="@drawable/add_memory"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/add_memory_view"
+        app:layout_constraintRight_toRightOf="@+id/add_memory_view"
+        app:layout_constraintBottom_toBottomOf="@+id/add_memory_view"
+        android:layout_marginEnd="16dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
