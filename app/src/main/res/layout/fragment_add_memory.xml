@@ -57,7 +57,17 @@
         android:layout_marginStart="68dp"
         />
 
-
+    <ImageView
+        android:id="@+id/add_memory_iamge_view"
+        android:src="@drawable/add_photo"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/add_memory_view"
+        app:layout_constraintLeft_toLeftOf="@+id/add_memory_view"
+        app:layout_constraintRight_toRightOf="@+id/add_memory_view"
+        app:layout_constraintBottom_toBottomOf="@+id/add_memory_view"
+        />
 
     <View
         android:id="@+id/add_memory_time_view"
