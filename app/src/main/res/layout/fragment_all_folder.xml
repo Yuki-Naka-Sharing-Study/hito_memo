@@ -40,7 +40,7 @@
         />
 
     <ImageButton
-        android:id="@+id/order_grid_or_list_iamge_button"
+        android:id="@+id/order_grid_image_button"
         android:visibility="visible"
         android:src="@drawable/grid"
         android:background="?android:attr/selectableItemBackground"
