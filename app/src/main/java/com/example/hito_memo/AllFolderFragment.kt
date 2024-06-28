@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.hito_memo.databinding.FragmentAllFolderBinding
 
-
 class AllFolderFragment : Fragment() {
 
     private var _binding: FragmentAllFolderBinding? = null
@@ -29,6 +28,14 @@ class AllFolderFragment : Fragment() {
 
         binding.backToMainFragmentView.setOnClickListener {
             navController.navigate(R.id.action_allFolderFragment_to_mainFragment)
+        }
+
+        binding.searchEditText.setOnClickListener {
+
+        }
+
+        binding.navigateToFragmentAddPerson.setOnClickListener {
+
         }
     }
 
