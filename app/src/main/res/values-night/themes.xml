@@ -3,10 +3,6 @@
     <style name="Base.Theme.Hito_memo" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <color name="black_or_white">#FFFFFFFF</color>
     </style>
-
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:forceDarkAllowed">true</item>
-    </style>
-
 </resources>
