@@ -107,4 +107,22 @@
             android:id="@+id/action_noNotificationFragment_to_settingFragment"
             app:destination="@id/settingFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/profileCustomizeFragment"
+        android:name="com.example.hito_memo.ProfileCustomizeFragment"
+        android:label="fragment_profile_customize"
+        tools:layout="@layout/fragment_profile_customize" >
+        <action
+            android:id="@+id/action_profileCustomizeFragment_to_addMemoryFragment"
+            app:destination="@id/addMemoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMemoryFragment"
+        android:name="com.example.hito_memo.AddMemoryFragment"
+        android:label="fragment_add_memory"
+        tools:layout="@layout/fragment_add_memory" >
+        <action
+            android:id="@+id/action_addMemoryFragment_to_profileCustomizeFragment"
+            app:destination="@id/profileCustomizeFragment" />
+    </fragment>
 </navigation>
