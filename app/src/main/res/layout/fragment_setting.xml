@@ -27,7 +27,7 @@
         android:text="設定"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/black_or_white"
+        android:textColor="@color/black_or_white_string"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
