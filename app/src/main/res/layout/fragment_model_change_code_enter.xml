@@ -44,7 +44,7 @@
         android:text="機種変更コード入力"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -56,6 +56,8 @@
     <TextView
         android:id="@+id/order_about_enter_model_change_code_text_view"
         android:text="現行端末で発行した機種変更コードを入力してください。"
+        android:textSize="12sp"
+        android:textColor="@color/black_or_white"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         app:layout_constraintTop_toBottomOf="@+id/model_change_code_enter_text_view_top"

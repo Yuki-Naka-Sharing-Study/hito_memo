@@ -44,7 +44,7 @@
         android:text="通知が来ない"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -57,6 +57,7 @@
         android:id="@+id/message_to_who_has_no_notification_text_view"
         android:text="通知が来ない方は、以下の設定を確認して\nください。"
         android:textSize="16sp"
+        android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/no_notification_text_view_top"
@@ -68,6 +69,8 @@
     <TextView
         android:id="@+id/step1_text_view"
         android:text="<STEP1>設定を開く"
+        android:textSize="12sp"
+        android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/message_to_who_has_no_notification_text_view"
@@ -89,6 +92,8 @@
     <TextView
         android:id="@+id/step2_text_view"
         android:text="<STEP2>通知を押下"
+        android:textSize="12sp"
+        android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/step1_image_view"
@@ -111,6 +116,8 @@
     <TextView
         android:id="@+id/step3_text_view"
         android:text="<STEP3>下にスクロール"
+        android:textSize="12sp"
+        android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/step2_image_view"
@@ -132,6 +139,8 @@
     <TextView
         android:id="@+id/step4_text_view"
         android:text="<STEP4>ヒトメモを選択"
+        android:textSize="12sp"
+        android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/step3_image_view"
@@ -153,6 +162,8 @@
     <TextView
         android:id="@+id/step5_text_view"
         android:text="<STEP5>「通知を許可」をオンにする"
+        android:textSize="12sp"
+        android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/step4_image_view"
@@ -173,7 +184,9 @@
 
     <TextView
         android:id="@+id/contact_me_text_view"
-        android:text="上記の手順を行っても、通知が来ない場合は、\n以下のメールアドレスにお問い合わせください。\nsatoriku1064@gmail.com"
+        android:text="上記の手順を行っても、通知が来ない場合は、\n以下のメールアドレスにお問い合わせください。\nsatorikuto1064@gmail.com"
+        android:textSize="12sp"
+        android:textColor="@color/black_or_white"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:layout_constraintTop_toBottomOf="@+id/step5_image_view"

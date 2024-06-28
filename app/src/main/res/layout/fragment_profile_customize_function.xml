@@ -33,7 +33,7 @@
         android:text="プロフィールカスタマイズ機能について"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -68,6 +68,8 @@
     <TextView
         android:id="@+id/description_about_profile_customize_function_text_view"
         android:text="この機能はプロフィールの項目を自由自在に変更できます。たとえば、血液型、身長、体重、母校、既婚者かどうかなどの情報を追加したり、不要な項目を非表示にしたり、項目の並び順を自由に変更したりできます。\n\nこの機能を使うことで、あなた専用のプロフィールを作成することが可能になります。"
+        android:textSize="12sp"
+        android:textColor="@color/black_or_white"
         android:layout_width="0dp"
         android:layout_height="100dp"
         app:layout_constraintTop_toBottomOf="@+id/about_profile_customize_function_text_view"
@@ -87,11 +89,14 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description_about_profile_customize_function_text_view"
         app:layout_constraintBottom_toTopOf="@+id/but_profile_customize_function_text_view"
+        android:layout_marginTop="20dp"
         />
 
     <TextView
         android:id="@+id/but_profile_customize_function_text_view"
         android:text="しかし、このカスタマイズ機能はヒトメモPRO\nでのみ利用可能です。"
+        android:textSize="12sp"
+        android:textColor="@color/black_or_white"
         android:layout_width="0dp"
         android:layout_height="40dp"
         app:layout_constraintTop_toBottomOf="@+id/screen_shot_of_profile_customize_function_image_view"
