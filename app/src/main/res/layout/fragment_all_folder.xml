@@ -87,6 +87,7 @@
         android:id="@+id/search_edit_text"
         android:background="@drawable/rounded_background_gray"
         android:hint="検索"
+        android:textColorHint="@color/gray"
         android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="36dp"
