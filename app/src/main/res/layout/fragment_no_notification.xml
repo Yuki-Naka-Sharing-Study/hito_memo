@@ -179,7 +179,7 @@
 
     <TextView
         android:id="@+id/contact_me_text_view"
-        android:text="上記の手順を行っても、通知が来ない場合は、\n以下のメールアドレスにお問い合わせください。\nsatoriku1064@gmail.com"
+        android:text="上記の手順を行っても、通知が来ない場合は、\n以下のメールアドレスにお問い合わせください。\nsatorikuto1064@gmail.com"
         android:textColor="@color/black_or_white"
         android:layout_width="match_parent"
         android:layout_height="60dp"
