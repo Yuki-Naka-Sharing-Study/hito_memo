@@ -6,7 +6,7 @@
     android:id="@+id/fragment_setting"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f8f8ff"
+    android:background="@color/light_or_dark_background"
     tools:context=".SettingFragment"
     >
 
