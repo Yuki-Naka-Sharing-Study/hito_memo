@@ -51,7 +51,7 @@
 
     <EditText
         android:id="@+id/edit_text_add_new_folder"
-        android:background="@drawable/rounded_background_white"
+        android:background="@drawable/light_or_dark_rounded_background"
         android:inputType="text"
         android:gravity="center_vertical"
         android:text="新規フォルダ"

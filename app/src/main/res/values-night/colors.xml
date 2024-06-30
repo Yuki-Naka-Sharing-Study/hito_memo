@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="light_or_dark_background">#FF000000</color>
+    <color name="light_or_dark_rounded_background">#dcdcdc</color>
     <color name="black_or_white">#FFFFFFFF</color>
     <color name="blue_or_light_blue">#00bfff</color>
     <color name="white">#FFFFFFFF</color>

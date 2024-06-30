@@ -159,7 +159,7 @@
 
     <View
         android:id="@+id/profile_customize_view"
-        android:background="@drawable/rounded_background_gray"
+        android:background="@drawable/light_or_dark_rounded_background"
         android:visibility="visible"
         android:layout_width="244dp"
         android:layout_height="36dp"
@@ -200,7 +200,7 @@
     <View
         android:id="@+id/add_memory_view"
         android:visibility="gone"
-        android:background="@drawable/rounded_background_gray"
+        android:background="@drawable/light_or_dark_rounded_background"
         android:layout_width="160dp"
         android:layout_height="36dp"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -258,7 +258,7 @@
 
     <View
         android:id="@+id/restore_purchase_view"
-        android:background="@drawable/rounded_background_gray"
+        android:background="@drawable/light_or_dark_rounded_background"
         android:layout_width="160dp"
         android:layout_height="36dp"
         app:layout_constraintTop_toBottomOf="@+id/yearly_plan_view"
