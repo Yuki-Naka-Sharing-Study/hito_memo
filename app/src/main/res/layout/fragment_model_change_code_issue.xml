@@ -16,7 +16,7 @@
 
     <ImageButton
         android:id="@+id/back_to_main_view_from_model_change_code_image_button"
-        android:src="@drawable/back"
+        android:src="@drawable/back_blue"
         android:background="?android:attr/selectableItemBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:id="@+id/back_to_main_view_from_model_change_code_issue_text_view"
         android:text="設定"
         android:textSize="16sp"
-        android:textColor="#4169e1"
+        android:textColor="@color/blue_or_light_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -103,7 +103,7 @@
 
     <ImageView
         android:id="@+id/image_about_step1_model_change_code_issue_image_view"
-        android:src="@drawable/all_folder"
+        android:src="@drawable/all_folder_blue_ver"
         android:background="?attr/selectableItemBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

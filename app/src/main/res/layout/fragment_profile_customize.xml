@@ -18,7 +18,7 @@
 
     <ImageButton
         android:id="@+id/back_to_all_folder_view_image_button"
-        android:src="@drawable/back"
+        android:src="@drawable/back_blue"
         android:background="?android:attr/selectableItemBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
         android:id="@+id/back_to_all_folder_view_text_view"
         android:text="すべて"
         android:textSize="16sp"
-        android:textColor="#4169e1"
+        android:textColor="@color/blue_or_light_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -175,7 +175,7 @@
         android:visibility="visible"
         android:text="プロフィールカスタマイズ"
         android:textSize="16sp"
-        android:textColor="#4169e1"
+        android:textColor="@color/blue_or_light_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/profile_customize_view"
@@ -187,8 +187,9 @@
 
     <ImageButton
         android:id="@+id/profile_customize_image_button"
-        android:visibility="visible"
         android:src="@drawable/settings_blue_ver"
+        android:background="?attr/selectableItemBackground"
+        android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/profile_customize_view"

@@ -6,7 +6,7 @@
 
     <ImageButton
         android:id="@+id/each_folder_image_view"
-        android:src="@drawable/all_folder"
+        android:src="@drawable/all_folder_blue_ver"
         android:background="?android:attr/selectableItemBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
