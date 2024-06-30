@@ -6,10 +6,11 @@
 
     <TextView
         android:id="@+id/about_this_app_item_text_view"
+        android:text="このアプリについての項目"
+        android:textColor="@color/black_or_white"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="このアプリについての項目"
         android:visibility="visible"
         />
 

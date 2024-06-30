@@ -3,7 +3,6 @@
     <style name="Base.Theme.Hito_memo" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <color name="black_or_white">#FF000000</color>
     </style>
 
     <style name="Theme.Hito_memo" parent="Base.Theme.Hito_memo" />

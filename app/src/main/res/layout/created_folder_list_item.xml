@@ -19,6 +19,8 @@
     <TextView
         android:id="@+id/each_folder_text_view"
         android:text="新規フォルダ"
+        android:textSize="12sp"
+        android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"

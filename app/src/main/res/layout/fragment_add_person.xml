@@ -69,7 +69,7 @@
             android:layout_weight="1"
             android:minWidth="0dp"
             android:text="プロフィール"
-            android:textColor="@color/black"
+            android:textColor="@color/black_or_white"
             />
 
         <com.google.android.material.button.MaterialButton
@@ -80,7 +80,7 @@
             android:layout_weight="1"
             android:minWidth="0dp"
             android:text="メモ"
-            android:textColor="@color/black"
+            android:textColor="@color/black_or_white"
             />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
