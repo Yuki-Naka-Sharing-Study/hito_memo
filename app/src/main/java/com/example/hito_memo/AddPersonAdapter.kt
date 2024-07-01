@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import com.example.hito_memo.databinding.HitoMemoProListItemBinding
+import com.example.hito_memo.databinding.AddPersonListItemBinding
 
-class HitoMemoProAdapter(private val context: Context, private val dataSource: List<String>) : BaseAdapter() {
+class AddPersonAdapter(private val context: Context, private val dataSource: List<String>) : BaseAdapter() {
 
     private val inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
@@ -24,20 +24,20 @@ class HitoMemoProAdapter(private val context: Context, private val dataSource: L
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val binding: HitoMemoProListItemBinding
+        val binding: AddPersonListItemBinding
         val view: View
 
         if (convertView == null) {
-            binding = HitoMemoProListItemBinding.inflate(inflater, parent, false)
+            binding = AddPersonListItemBinding.inflate(inflater, parent, false)
             view = binding.root
             view.tag = binding
         } else {
-            binding = convertView.tag as HitoMemoProListItemBinding
+            binding = convertView.tag as AddPersonListItemBinding
             view = convertView
         }
 
-        val hitoMemoProItem = getItem(position) as String
-        binding.hitoMemoProItemTextView.text = hitoMemoProItem
+        val addPersonItem = getItem(position) as String
+        binding.addPersonListItemTextView.text = addPersonItem
 
         return view
     }

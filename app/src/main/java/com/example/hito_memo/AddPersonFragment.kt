@@ -19,6 +19,11 @@ class AddPersonFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentAddPersonBinding.inflate(inflater, container, false)
+
+        val addPersonItems = listOf("名前", "フリガナ", "ニックネーム", "性別", "誕生日", "出身地", "住所", "職業", "関係", "電話番号", "Email", "X(旧 Twitter)", "Instagram", "Facebook")
+        val addPersonAdapter = AddPersonAdapter(requireContext(), addPersonItems)
+        binding.addPersonListView.adapter = addPersonAdapter
+
         return binding.root
     }
 
@@ -44,7 +49,7 @@ class AddPersonFragment : Fragment() {
             if (isChecked) {
                 when (checkedId) {
                     R.id.toggle_button_profile -> {
-                        binding.scrollViewOfProfileAndMemo.isVisible = isChecked
+                        binding.addPersonListView.isVisible = isChecked
                     }
                     R.id.toggle_button_memo -> {
                         binding.editTextMemoOfPerson.isVisible = isChecked
