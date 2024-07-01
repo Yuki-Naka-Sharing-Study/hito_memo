@@ -178,7 +178,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/profile_customize_view"
         app:layout_constraintLeft_toLeftOf="@+id/profile_customize_view"
-        app:layout_constraintRight_toLefttOf="@+id/profile_customize_image_button"
+        app:layout_constraintRight_toLeftOf="@+id/profile_customize_image_button"
         app:layout_constraintBottom_toBottomOf="@+id/profile_customize_view"
         android:layout_marginStart="8dp"
         />
