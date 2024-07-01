@@ -80,7 +80,7 @@
 
     <TextView
         android:id="@+id/step1_model_change_code_issue_text_view"
-        android:text="<STEP1>iCloudの設定の確認"
+        android:text="&lt;STEP1&gt;iCloudの設定の確認"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/black_or_white"
@@ -115,7 +115,7 @@
 
     <TextView
         android:id="@+id/step2_model_change_code_issue_text_view"
-        android:text="<STEP2>"
+        android:text="&lt;STEP2&gt;"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/black_or_white"
@@ -139,7 +139,7 @@
 
     <TextView
         android:id="@+id/step3_model_change_code_issue_text_view"
-        android:text="<STEP3>機種変更コード入力"
+        android:text="&lt;STEP3&gt;機種変更コード入力"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/black_or_white"
