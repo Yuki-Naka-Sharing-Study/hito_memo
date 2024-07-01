@@ -69,7 +69,7 @@
 
     <TextView
         android:id="@+id/step1_text_view"
-        android:text="<STEP1>設定を開く"
+        android:text="&lt;STEP1&gt;設定を開く"
         android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
 
     <TextView
         android:id="@+id/step2_text_view"
-        android:text="<STEP2>通知を押下"
+        android:text="&lt;STEP2&gt;通知を押下"
         android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
 
     <TextView
         android:id="@+id/step3_text_view"
-        android:text="<STEP3>下にスクロール"
+        android:text="&lt;STEP3&gt;下にスクロール"
         android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -136,7 +136,7 @@
 
     <TextView
         android:id="@+id/step4_text_view"
-        android:text="<STEP4>ヒトメモを選択"
+        android:text="&lt;STEP4&gt;ヒトメモを選択"
         android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -158,7 +158,7 @@
 
     <TextView
         android:id="@+id/step5_text_view"
-        android:text="<STEP5>「通知を許可」をオンにする"
+        android:text="&lt;STEP5&gt;「通知を許可」をオンにする"
         android:textColor="@color/black_or_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
