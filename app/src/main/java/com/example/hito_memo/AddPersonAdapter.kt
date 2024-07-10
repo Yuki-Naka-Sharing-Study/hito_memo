@@ -1,44 +1,92 @@
 package com.example.hito_memo
 
-import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import com.example.hito_memo.databinding.AddPersonListItemBinding
+import androidx.recyclerview.widget.RecyclerView
+import com.example.hito_memo.databinding.AddPersonItemEditTextWithoutImageViewBinding
+import com.example.hito_memo.databinding.AddPersonItemTextViewWithImageViewBinding
+import com.example.hito_memo.databinding.AddPersonItemTextViewWithoutImageViewBinding
 
-class AddPersonAdapter(private val context: Context, private val dataSource: List<String>) : BaseAdapter() {
+const val ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW = 0
+const val ITEM_TEXT_VIEW_WITH_IMAGE_VIEW = 1
+const val ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW = 2
 
-    private val inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+class AddPersonAdapter(private val mList: List<AddPersonDataItem>) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    override fun getCount(): Int {
-        return dataSource.size
-    }
+    inner class ItemTextViewWithoutImageViewHolder(private val binding: AddPersonItemTextViewWithoutImageViewBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
-    override fun getItem(position: Int): Any {
-        return dataSource[position]
-    }
-
-    override fun getItemId(position: Int): Long {
-        return position.toLong()
-    }
-
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val binding: AddPersonListItemBinding
-        val view: View
-
-        if (convertView == null) {
-            binding = AddPersonListItemBinding.inflate(inflater, parent, false)
-            view = binding.root
-            view.tag = binding
-        } else {
-            binding = convertView.tag as AddPersonListItemBinding
-            view = convertView
+        fun bindTextViewWithoutImageView(dataItem: AddPersonDataItem) {
+            binding.profileTextView.text = dataItem.profileTextViewString
+            binding.profileEditText.setHint(dataItem.profileEditTextString)
         }
+    }
 
-        val addPersonItem = getItem(position) as String
-        binding.addPersonListItemTextView.text = addPersonItem
+    inner class ItemTextViewWithImageViewHolder(private val binding: AddPersonItemTextViewWithImageViewBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
-        return view
+        fun bindTextViewWithImageView(dataItem: AddPersonDataItem) {
+            binding.profileTextView.text = dataItem.profileTextViewString
+            binding.profileEditText.setHint(dataItem.profileEditTextString)
+            dataItem.profileImageViewInt?.let { binding.profileImageView.setImageResource(it) }
+        }
+    }
+
+    inner class ItemEditTextWithoutImageViewHolder(private val binding: AddPersonItemEditTextWithoutImageViewBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        fun bindEditTextWithoutImageView(dataItem: AddPersonDataItem) {
+            binding.customProfileEditText.setHint(dataItem.profileCustomEditTextString)
+            binding.profileEditText.setHint(dataItem.profileEditTextString)
+        }
+    }
+
+    override fun getItemViewType(position: Int): Int {
+
+        return if (mList[position].profileImageViewInt != null) {
+            ITEM_TEXT_VIEW_WITH_IMAGE_VIEW
+        } else if (mList[position].profileTextViewString != null) {
+            ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW
+        } else {
+            ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW
+        }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+
+        if (viewType == ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW) {
+            val binding = AddPersonItemTextViewWithoutImageViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            return ItemTextViewWithoutImageViewHolder(binding)
+
+        } else if (viewType == ITEM_TEXT_VIEW_WITH_IMAGE_VIEW){
+            val binding = AddPersonItemTextViewWithImageViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            return ItemTextViewWithImageViewHolder(binding)
+
+        } else {
+            val binding = AddPersonItemEditTextWithoutImageViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            return ItemEditTextWithoutImageViewHolder(binding)
+        }
+    }
+
+    override fun getItemCount(): Int {
+        return mList.size
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+
+        if (getItemViewType(position) == ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW) {
+
+            (holder as ItemTextViewWithoutImageViewHolder).bindTextViewWithoutImageView(mList[position])
+
+        } else if (getItemViewType(position) == ITEM_TEXT_VIEW_WITH_IMAGE_VIEW) {
+
+            (holder as ItemTextViewWithImageViewHolder).bindTextViewWithImageView(mList[position])
+
+        } else if (getItemViewType(position) == ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW) {
+
+            (holder as ItemEditTextWithoutImageViewHolder).bindEditTextWithoutImageView(mList[position])
+
+        }
     }
 }

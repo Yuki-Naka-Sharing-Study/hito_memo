@@ -7,12 +7,14 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hito_memo.databinding.FragmentAddPersonBinding
 
 class AddPersonFragment : Fragment() {
 
     private var _binding: FragmentAddPersonBinding? = null
     private val binding get() = _binding!!
+    private lateinit var mList: ArrayList<AddPersonDataItem>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,12 +22,172 @@ class AddPersonFragment : Fragment() {
     ): View {
         _binding = FragmentAddPersonBinding.inflate(inflater, container, false)
 
-        val addPersonTextViewItems = listOf("名前", "フリガナ", "ニックネーム", "性別", "誕生日", "出身地", "住所", "職業", "関係", "電話番号", "Email", "X(旧 Twitter)", "Instagram", "Facebook")
-        val addPersonEditTextItems = listOf("田中太郎", "タナカタロウ", "たろちゃん", "未選択", "2000年1月1日", "秋田県", "東京都", "エンジニア", "会社の同僚", "080-1234-1234", "taro@example.com", "@tanakataro", "@tanakataro", "@tanakataro")
-        val addPersonAdapter = AddPersonAdapter(requireContext(), addPersonTextViewItems)
-        binding.addPersonListView.adapter = addPersonAdapter
+        binding.addPersonRecyclerView.setHasFixedSize(true)
+        binding.addPersonRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        mList = ArrayList()
+        prepareData()
+
+        val adapter = AddPersonAdapter(mList)
+        binding.addPersonRecyclerView.adapter = adapter
 
         return binding.root
+    }
+
+    private fun prepareData() {
+
+        mList.add(
+            AddPersonDataItem(
+                "名前",
+                "田中太郎",
+                null,
+                null
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                "フリガナ",
+                "タナカタロウ",
+                null,
+                null
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                "ニックネーム",
+                "たろちゃん",
+                null,
+                null
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                "性別",
+                "未選択",
+                null,
+                null
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                "誕生日",
+                "2000年1月1日",
+                null,
+                null
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                "出身地",
+                "秋田県",
+                null,
+                null
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                "住所",
+                "東京都",
+                null,
+                R.drawable.address
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                "職業",
+                "エンジニア",
+                null,
+                null
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                "関係",
+                "会社の同僚",
+                null,
+                null
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                "電話番号",
+                "080-1234-1234",
+                null,
+                R.drawable.link
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                "Email",
+                "taro@example.com",
+                null,
+                R.drawable.link
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                "X(旧Twitter)",
+                "@tanakataro",
+                null,
+                R.drawable.link
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                "Instagram",
+                "@tanakataro",
+                null,
+                R.drawable.link
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                "Facebook",
+                "@tanakataro",
+                null,
+                R.drawable.link
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                null,
+                "内容",
+                "カスタム1",
+                null
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                null,
+                "内容",
+                "カスタム2",
+                null
+            )
+        )
+
+        mList.add(
+            AddPersonDataItem(
+                null,
+                "内容",
+                "カスタム3",
+                null,
+            )
+        )
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -50,7 +212,7 @@ class AddPersonFragment : Fragment() {
             if (isChecked) {
                 when (checkedId) {
                     R.id.toggle_button_profile -> {
-                        binding.addPersonListView.isVisible = isChecked
+                        binding.addPersonRecyclerView.isVisible = isChecked
                     }
                     R.id.toggle_button_memo -> {
                         binding.editTextMemoOfPerson.isVisible = isChecked
