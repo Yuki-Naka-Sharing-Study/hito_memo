@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hito_memo.databinding.FragmentAddPersonBinding
 
@@ -24,6 +25,9 @@ class AddPersonFragment : Fragment() {
 
         binding.addPersonRecyclerView.setHasFixedSize(true)
         binding.addPersonRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        val itemDecoration = DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
+        binding.addPersonRecyclerView.addItemDecoration(itemDecoration)
 
         mList = ArrayList()
         prepareData()
