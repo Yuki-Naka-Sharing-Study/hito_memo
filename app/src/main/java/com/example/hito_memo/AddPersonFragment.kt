@@ -21,6 +21,7 @@ class AddPersonFragment : Fragment() {
         _binding = FragmentAddPersonBinding.inflate(inflater, container, false)
 
         val addPersonTextViewItems = listOf("名前", "フリガナ", "ニックネーム", "性別", "誕生日", "出身地", "住所", "職業", "関係", "電話番号", "Email", "X(旧 Twitter)", "Instagram", "Facebook")
+        val addPersonEditTextItems = listOf("田中太郎", "タナカタロウ", "たろちゃん", "未選択", "2000年1月1日", "秋田県", "東京都", "エンジニア", "会社の同僚", "080-1234-1234", "taro@example.com", "@tanakataro", "@tanakataro", "@tanakataro")
         val addPersonAdapter = AddPersonAdapter(requireContext(), addPersonTextViewItems)
         binding.addPersonListView.adapter = addPersonAdapter
 
