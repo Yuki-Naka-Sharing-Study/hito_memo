@@ -1,11 +1,9 @@
 package com.example.hito_memo
 
-import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.hito_memo.databinding.FragmentNewFolderBinding
@@ -35,16 +33,12 @@ class NewFolderFragment : Fragment() {
         binding.textViewCompleteNewFolder.setOnClickListener {
             if (binding.editTextAddNewFolder.text.toString() == "") {
 
-                val customView = layoutInflater.inflate(R.layout.custom_alert_dialog, null)
-                val dialog = AlertDialog.Builder(requireContext(), R.style.CustomAlertDialog)
-                    .setView(customView)
-                    .create()
-
-                customView.findViewById<Button>(R.id.alertPositiveButton).setOnClickListener {
-                    dialog.dismiss()
-                }
-
-                dialog.show()
+                    NewFolderDialog.Builder(this)
+                        .setTitle("別の名前を選択してください。")
+                        .setMessage("フォルダ名は空白にできません。")
+                        .setPositiveButton("OK")
+                        .build()
+                        .show(childFragmentManager, NewFolderDialog::class.simpleName)
 
             } else {
                 navController.navigate(R.id.action_newFolderFragment_to_mainFragment)
