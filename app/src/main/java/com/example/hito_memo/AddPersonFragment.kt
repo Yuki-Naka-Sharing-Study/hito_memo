@@ -204,7 +204,20 @@ class AddPersonFragment : Fragment() {
         }
 
         binding.textViewAddPerson.setOnClickListener {
-            navController.navigate(R.id.action_addPersonFragment_to_mainFragment)
+
+            if (binding.editTextMemoOfPerson.text.toString() == "") {
+
+                AddPersonDialog.Builder(this)
+                    .setTitle("入力エラー")
+                    .setMessage("名前、フリガナ、またはニックネームの\n少なくとも一つを入力してください。")
+                    .setPositiveButton("OK")
+                    .build()
+                    .show(childFragmentManager, AddPersonDialog::class.simpleName)
+
+            } else {
+                navController.navigate(R.id.action_addPersonFragment_to_mainFragment)
+            }
+
         }
 
         binding.addImageOfPersonImageView.setOnClickListener {
