@@ -59,4 +59,7 @@ data class UserEntity(
 
     @ColumnInfo(name = "custom_three_of_user")
     var customThreeOfUser: String = "",
+
+    @ColumnInfo(name = "memo_of_user")
+    var memoOfUser: String = "",
 )
