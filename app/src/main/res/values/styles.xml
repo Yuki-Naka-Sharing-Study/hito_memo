@@ -1,0 +1,7 @@
+<resources>
+    <!-- Other styles -->
+    <style name="CustomAlertDialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="background">?attr/selectableItemBackground</item>
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+</resources>
