@@ -9,6 +9,9 @@ data class UserEntity(
     @PrimaryKey(autoGenerate = true)
     var userId: Int = 0,
 
+    @ColumnInfo(name = "name_of_user_folder")
+    var nameOfUserFolder: String = "",
+
     @ColumnInfo(name = "name_of_user")
     var nameOfUser: String = "",
 
