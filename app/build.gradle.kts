@@ -41,7 +41,15 @@ android {
 }
 
 dependencies {
-    implementation("io.coil-kt:coil-compose:2.1.0")
+
+    // 以下Room関連
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.rxjava2)
+    implementation(libs.androidx.room.rxjava3)
+    implementation(libs.androidx.room.guava)
+    testImplementation(libs.androidx.room.testing)
+    implementation(libs.androidx.room.paging)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
