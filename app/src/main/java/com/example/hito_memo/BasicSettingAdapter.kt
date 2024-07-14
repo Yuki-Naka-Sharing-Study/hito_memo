@@ -1,82 +1,81 @@
 //package com.example.hito_memo
 //
-//import android.view.LayoutInflater
 //import android.view.ViewGroup
 //import androidx.recyclerview.widget.RecyclerView
+//import com.example.hito_memo.databinding.BasicSettingItemImageViewWithEditTextBinding
+//import com.example.hito_memo.databinding.BasicSettingItemTextViewWithToggleButtonBinding
 //
 //
-//const val ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW = 0
-//const val ITEM_TEXT_VIEW_WITH_IMAGE_VIEW = 1
-//const val ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW = 2
+//const val BASIC_SETTING_ITEM_TEXT_VIEW_WITH_TOGGLE_BUTTON = 0
+//const val BASIC_SETTING_ITEM_IMAGE_VIEW_WITH_EDIT_TEXT = 1
 //
 //
-//class BasicSettingAdapter(private val mList: List<BasicSettingDataItem>) :
+//class BasicSettingAdapter(private val basicSettingList: List<BasicSettingDataItem>) :
 //    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 //
-//    inner class ItemTextViewWithoutImageViewHolder(private val binding: ItemTextViewWithoutImageViewBinding) :
+//    inner class BasicSettingItemTextViewWIthToggleButtonViewHolder(private val binding: BasicSettingItemTextViewWithToggleButtonBinding) :
 //        RecyclerView.ViewHolder(binding.root) {
 //
-//        fun bindTextViewWithoutImageView(dataItem: BasicSettingDataItem) {
-//            binding.profileTextView.text = dataItem.profileTextViewString
-//            binding.profileEditText.setHint(dataItem.profileEditTextString)
+//        fun bindBasicSettingItemTextViewWithToggleButtonView(dataItem: BasicSettingDataItem) {
+//            binding.basicSettingItemTextView.text = dataItem.basicSettingTextViewString
+//            // ToggleButtonのbindはこの書き方で合っているか？
+//            dataItem.basicSettingToggleButton.let { binding.basicSettingItemToggleButton }
 //        }
 //    }
 //
-//    inner class ItemTextViewWithImageViewHolder(private val binding: ItemTextViewWithImageViewBinding) :
+//    inner class ItemBasicSettingImageViewWithEditTextViewHolder(private val binding: BasicSettingItemImageViewWithEditTextBinding) :
 //        RecyclerView.ViewHolder(binding.root) {
 //
-//        fun bindTextViewWithImageView(dataItem: BasicSettingDataItem) {
-//            binding.profileTextView.text = dataItem.profileTextViewString
-//            binding.profileEditText.setHint(dataItem.profileEditTextString)
-//            dataItem.profileImageViewInt?.let { binding.profileImageView.setImageResource(it) }
+//        fun bindBasicSettingImageViewWithEditTextView(dataItem: BasicSettingDataItem) {
+//            dataItem.profileImageViewInt?.let { binding.basicSettingItemImageView.setImageResource(it) }
+//            binding.basicSettingItemEditText.setHint("アイコン変更")
 //        }
 //    }
 //
 //    override fun getItemViewType(position: Int): Int {
 //
-//        return if (mList[position].profileImageViewInt != null) {
-//            ITEM_TEXT_VIEW_WITH_IMAGE_VIEW
-//        } else if (mList[position].profileTextViewString != null) {
-//            ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW
-//        } else {
-//            ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW
-//        }
+////        return if (mList[position].profileImageViewInt != null) {
+////            ITEM_TEXT_VIEW_WITH_IMAGE_VIEW
+////        } else {
+////            ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW
+////        }
+//
+//        // return  if (basicSettingList[position])
+//
 //    }
 //
 //    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 //
-//        if (viewType == ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW) {
-//            val binding = ItemTextViewWithoutImageViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-//            return ItemTextViewWithoutImageViewHolder(binding)
+////        if (viewType == ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW) {
+////            val binding = ItemTextViewWithoutImageViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+////            return ItemTextViewWithoutImageViewHolder(binding)
+////        } else {
+////            val binding = ItemEditTextWithoutImageViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+////            return ItemEditTextWithoutImageViewHolder(binding)
+////        }
 //
-//        } else if (viewType == ITEM_TEXT_VIEW_WITH_IMAGE_VIEW){
-//            val binding = ItemTextViewWithImageViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-//            return ItemTextViewWithImageViewHolder(binding)
 //
-//        } else {
-//            val binding = ItemEditTextWithoutImageViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-//            return ItemEditTextWithoutImageViewHolder(binding)
-//        }
+//
 //    }
 //
 //    override fun getItemCount(): Int {
-//        return mList.size
+//        return basicSettingList.size
 //    }
 //
 //    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
 //
-//        if (getItemViewType(position) == ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW) {
+////        if (getItemViewType(position) == ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW) {
+////
+////            (holder as ItemTextViewWithoutImageViewHolder).bindTextViewWithoutImageView(mList[position])
+////
+////        } else {
+////
+////            (holder as ItemEditTextWithoutImageViewHolder).bindEditTextWithoutImageView(mList[position])
+////
+////        }
 //
-//            (holder as ItemTextViewWithoutImageViewHolder).bindTextViewWithoutImageView(mList[position])
 //
-//        } else if (getItemViewType(position) == ITEM_TEXT_VIEW_WITH_IMAGE_VIEW) {
 //
-//            (holder as ItemTextViewWithImageViewHolder).bindTextViewWithImageView(mList[position])
 //
-//        } else if (getItemViewType(position) == ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW) {
-//
-//            (holder as ItemEditTextWithoutImageViewHolder).bindEditTextWithoutImageView(mList[position])
-//
-//        }
 //    }
 //}

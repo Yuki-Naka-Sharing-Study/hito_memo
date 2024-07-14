@@ -118,7 +118,8 @@
         android:background="@drawable/light_or_dark_rounded_background"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/basic_setting_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/basic_setting_text_view"
+        />
 
     <TextView
         android:id="@+id/model_change_text_view"

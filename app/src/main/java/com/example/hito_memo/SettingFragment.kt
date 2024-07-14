@@ -13,6 +13,12 @@ class SettingFragment : Fragment() {
     private var _binding: FragmentSettingBinding? = null
     private val binding get() = _binding!!
 
+    private lateinit var basicSettingList: ArrayList<BasicSettingDataItem>
+//    private lateinit var notificationSettingList: ArrayList<NotificationSettingDataItem>
+//    private lateinit var aboutThisAppList: ArrayList<AboutThisAppDataItem>
+
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,6 +31,17 @@ class SettingFragment : Fragment() {
         binding.securityListView.adapter = securityAdapter
 
         // 基本設定
+//        binding.basicSettingRecyclerView.setHasFixedSize(true)
+//        binding.basicSettingRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+//
+//        val itemDecoration = DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
+//        binding.basicSettingRecyclerView.addItemDecoration(itemDecoration)
+//
+//        basicSettingList = ArrayList()
+//        prepareBasicSettingData()
+//
+//        val basicSettingAdapter = BasicSettingAdapter(basicSettingList)
+//        binding.basicSettingRecyclerView.adapter = basicSettingAdapter
 
 
         // 通知設定
@@ -59,6 +76,44 @@ class SettingFragment : Fragment() {
 //            navController.navigate(R.id.action_settingFragment_to_modelChangeCodeIssueFragment)
 //        }
     }
+
+    private fun prepareBasicSettingData() {
+
+//        basicSettingList.add(
+//            BasicSettingDataItem(
+//                "入力ヒント",
+//                R.id.toggle_button_memo,
+//                R.drawable.verified,
+//                null
+//            )
+//        )
+//
+//        basicSettingList.add(
+//            BasicSettingDataItem(
+//                "人物データ削除確認",
+//                R.drawable.verified,
+//                null
+//            )
+//        )
+//
+//        basicSettingList.add(
+//            BasicSettingDataItem(
+//                null,
+//                R.drawable.verified,
+//                "アイコン変更"
+//            )
+//        )
+
+    }
+
+    private fun prepareNotificationSettingData() {
+
+    }
+
+    private fun prepareAboutThisAppData() {
+
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

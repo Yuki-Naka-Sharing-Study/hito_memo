@@ -2,10 +2,10 @@ package com.example.hito_memo
 
 import android.app.AlertDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.hito_memo.databinding.FragmentNewFolderBinding
 
@@ -34,7 +34,7 @@ class NewFolderFragment : Fragment() {
         // 「cancelNewFolderButton」をタップして文字列を削除した状態で
         // 「textViewCompleteNewFolder」をタップしても「AlertDialog」が表示されない。
         binding.textViewCompleteNewFolder.setOnClickListener {
-            if (binding.editTextAddNewFolder.text.equals("")) {
+            if (binding.editTextAddNewFolder.text.toString() == "") {
 
                 AlertDialog.Builder(requireContext())
                     .setTitle("別の名前を選択してください。")
