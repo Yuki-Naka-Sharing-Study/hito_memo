@@ -10,10 +10,10 @@ import androidx.room.Update
 @Dao
 interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertReview(vararg reviews: UserEntity)
+    fun insertUser(vararg reviews: UserEntity)
 
     @Update
-    fun updateReviews(vararg reviews: UserEntity)
+    fun updateUser(vararg reviews: UserEntity)
 
     @Delete
     fun delete(review: UserEntity)

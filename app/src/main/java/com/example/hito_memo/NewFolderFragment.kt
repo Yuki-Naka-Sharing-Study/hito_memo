@@ -5,8 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.hito_memo.databinding.FragmentNewFolderBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class NewFolderFragment : Fragment() {
 
@@ -41,6 +45,20 @@ class NewFolderFragment : Fragment() {
                         .show(childFragmentManager, NewFolderDialog::class.simpleName)
 
             } else {
+
+                val mainActivity = activity as MainActivity?
+                if (mainActivity != null) {
+
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        withContext(Dispatchers.Default) {
+                            mainActivity.userDao.insertUser(
+                                UserEntity(nameOfUserFolder = binding.editTextAddNewFolder.text.toString())
+                            )
+                        }
+                    }
+
+                }
+
                 navController.navigate(R.id.action_newFolderFragment_to_mainFragment)
             }
         }
