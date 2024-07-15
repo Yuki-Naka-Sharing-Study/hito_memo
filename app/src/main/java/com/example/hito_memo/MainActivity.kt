@@ -8,9 +8,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 
 class MainActivity : AppCompatActivity() {
+
+    //Room用
+    lateinit var userAppDatabase: UserAppDatabase
+    lateinit var userDao: UserDao
+    lateinit var userEntity: UserEntity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        userAppDatabase = UserAppDatabase.getUserAppDatabase(this)
+        userDao = userAppDatabase.userDao()
     }
 
     //画面がタッチされた時に反応するやつ
