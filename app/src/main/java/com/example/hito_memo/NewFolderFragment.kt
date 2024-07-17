@@ -34,6 +34,7 @@ class NewFolderFragment : Fragment() {
             navController.navigate(R.id.action_newFolderFragment_to_mainFragment)
         }
 
+        // りくとさんから習った空文字判定をしないといけない。
         binding.textViewCompleteNewFolder.setOnClickListener {
             if (binding.editTextAddNewFolder.text.toString() == "") {
 
