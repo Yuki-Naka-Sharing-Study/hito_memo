@@ -47,6 +47,10 @@ android {
 
 dependencies {
 
+    // LiveData
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+
     // 以下Room関連
     implementation(libs.androidx.room.runtime)
     ksp(libs.androidx.room.compiler)
