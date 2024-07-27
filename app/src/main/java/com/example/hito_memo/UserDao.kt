@@ -6,6 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface UserDao {
@@ -19,7 +20,7 @@ interface UserDao {
     fun delete(user: UserEntity)
 
     @Query("SELECT * FROM user_data_table")
-    fun getAll(): List<UserEntity>
+    fun getAll(): Flow<List<UserEntity>>
 
     @Query("SELECT * FROM user_data_table")
     fun deleteAll()
