@@ -15,16 +15,11 @@ class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
-    // 以下の処理について町田さんに質問する
-//    private var _bindingNewFolder: FragmentNewFolderBinding? = null
-//    private val bindingNewFolder get() = _bindingNewFolder!!
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
-//        _bindingNewFolder = FragmentNewFolderBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -36,7 +31,7 @@ class MainFragment : Fragment() {
         binding.createdFolder.visibility = View.VISIBLE
 
         viewModel.nameOfUserFolder.observe(viewLifecycleOwner, Observer {
-            binding.createdFolder
+            binding
         })
 
         binding.settingButton.setOnClickListener {
