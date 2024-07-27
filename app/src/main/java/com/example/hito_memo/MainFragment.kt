@@ -11,10 +11,10 @@ import androidx.navigation.fragment.findNavController
 import com.example.hito_memo.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
-//    private val viewModel by viewModels<UserViewModel>()
 
     private val viewModel: UserViewModel by viewModels {
-        UserViewModelFactory(UserRepository())
+        val userDao = UserAppDatabase.getUserAppDatabase(requireContext()).userDao()
+        UserViewModelFactory(UserRepository(userDao))
     }
 
     private var _binding: FragmentMainBinding? = null
