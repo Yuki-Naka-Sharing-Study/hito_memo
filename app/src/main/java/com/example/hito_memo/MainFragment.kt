@@ -5,11 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.hito_memo.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
-
+    private val viewModel by viewModels<UserViewModel>()
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
@@ -33,6 +35,9 @@ class MainFragment : Fragment() {
 
         binding.createdFolder.visibility = View.VISIBLE
 
+        viewModel.nameOfUserFolder.observe(viewLifecycleOwner, Observer {
+            binding.createdFolder
+        })
 
         binding.settingButton.setOnClickListener {
             navController.navigate(R.id.action_mainFragment_to_settingFragment)

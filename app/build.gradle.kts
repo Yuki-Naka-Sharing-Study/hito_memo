@@ -47,6 +47,9 @@ android {
 
 dependencies {
 
+    // Koin
+//    implementation "io.insert-koin:koin-android:$koin_version"
+
     // LiveData
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
