@@ -20,4 +20,7 @@ interface UserDao {
 
     @Query("SELECT * FROM user_data_table")
     fun getAll(): List<UserEntity>
+
+    @Query("SELECT * FROM user_data_table")
+    fun deleteAll()
 }
