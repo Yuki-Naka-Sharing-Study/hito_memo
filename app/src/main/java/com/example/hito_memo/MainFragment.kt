@@ -12,6 +12,11 @@ import com.example.hito_memo.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
     private val viewModel by viewModels<UserViewModel>()
+
+//    private val viewModel: UserViewModel by viewModels {
+//        UserViewModelFactory(UserRepository())
+//    }
+
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
@@ -28,10 +33,8 @@ class MainFragment : Fragment() {
 
         val navController = findNavController()
 
-        binding.createdFolder.visibility = View.VISIBLE
-
         viewModel.nameOfUserFolder.observe(viewLifecycleOwner, Observer {
-            binding
+            binding.createdFolder.visibility = View.VISIBLE
         })
 
         binding.settingButton.setOnClickListener {
