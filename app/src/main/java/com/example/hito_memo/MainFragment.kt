@@ -34,7 +34,7 @@ class MainFragment : Fragment() {
         val navController = findNavController()
 
         viewModel.nameOfUserFolder.observe(viewLifecycleOwner, Observer {
-            binding.createdFolder.visibility = View.VISIBLE
+            // binding.createdFolder.visibility = View.VISIBLE
         })
 
         binding.settingButton.setOnClickListener {
