@@ -25,6 +25,13 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
+
+        // 作成済みフォルダ
+//        val createdFolderItems = listOf(viewModel.nameOfUserFolder)
+        val createdFolderItems = listOf("")
+        val createdFolderAdapter = CreatedFolderAdapter(requireContext(), createdFolderItems)
+        binding.createdFolder.adapter = createdFolderAdapter
+
         return binding.root
     }
 
