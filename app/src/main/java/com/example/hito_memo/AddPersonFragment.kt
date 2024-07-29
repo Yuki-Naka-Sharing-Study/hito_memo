@@ -1,6 +1,7 @@
 package com.example.hito_memo
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -204,6 +205,8 @@ class AddPersonFragment : Fragment() {
         }
 
         binding.textViewAddPerson.setOnClickListener {
+
+            Log.d("machida", "onViewCreated: list = $mList")
 
             if (binding.editTextMemoOfPerson.text.toString() == "") {
 
