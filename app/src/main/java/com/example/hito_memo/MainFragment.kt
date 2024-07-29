@@ -26,11 +26,10 @@ class MainFragment : Fragment() {
     ): View {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
 
-        // 作成済みフォルダ
-//        val createdFolderItems = listOf(viewModel.nameOfUserFolder)
-        val createdFolderItems = listOf("")
-        val createdFolderAdapter = CreatedFolderAdapter(requireContext(), createdFolderItems)
-        binding.createdFolder.adapter = createdFolderAdapter
+        viewModel.nameOfUserFolder.observe(viewLifecycleOwner, Observer {
+            binding.createdFolder.adapter = CreatedFolderAdapter(requireContext(), it.map { it.nameOfUserFolder })
+        })
+
 
         return binding.root
     }
