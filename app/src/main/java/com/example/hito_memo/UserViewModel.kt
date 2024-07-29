@@ -11,4 +11,10 @@ class UserViewModel(
             = repo.getUsers().asLiveData()
     val nameOfUserFolder: LiveData<List<UserEntity>>
             = repo.getNameOfUserFolder().asLiveData()
+    val nameOfUser: LiveData<List<UserEntity>>
+            = repo.getNameOfUser().asLiveData()
+    val furiganaOfUser: LiveData<List<UserEntity>>
+            = repo.getFuriganaOfUser().asLiveData()
+    val nicknameOfUser: LiveData<List<UserEntity>>
+            = repo.getNicknameOfUser().asLiveData()
 }
