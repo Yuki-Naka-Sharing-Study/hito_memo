@@ -26,11 +26,12 @@ class MainFragment : Fragment() {
     ): View {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
 
-        // 作成済みフォルダ
-//        val createdFolderItems = listOf(viewModel.nameOfUserFolder)
-        val createdFolderItems = listOf("")
-        val createdFolderAdapter = CreatedFolderAdapter(requireContext(), createdFolderItems)
-        binding.createdFolder.adapter = createdFolderAdapter
+        viewModel.nameOfUserFolder.observe(viewLifecycleOwner, Observer {
+            binding.createdFolder.visibility = View.VISIBLE
+            val createdFolderItems = listOf("")
+            val createdFolderAdapter = CreatedFolderAdapter(requireContext(), createdFolderItems)
+            binding.createdFolder.adapter = createdFolderAdapter
+        })
 
         return binding.root
     }
@@ -40,9 +41,10 @@ class MainFragment : Fragment() {
 
         val navController = findNavController()
 
-        viewModel.nameOfUserFolder.observe(viewLifecycleOwner, Observer {
-            // binding.createdFolder.visibility = View.VISIBLE
-        })
+//        viewModel.nameOfUserFolder.observe(viewLifecycleOwner, Observer {
+//            // binding.createdFolder.visibility = View.VISIBLE
+//        })
+
 
         binding.settingButton.setOnClickListener {
             navController.navigate(R.id.action_mainFragment_to_settingFragment)
