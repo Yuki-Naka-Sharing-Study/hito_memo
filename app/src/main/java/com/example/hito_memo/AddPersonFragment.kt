@@ -215,6 +215,9 @@ class AddPersonFragment : Fragment() {
                     .show(childFragmentManager, AddPersonDialog::class.simpleName)
 
             } else {
+
+
+
                 navController.navigate(R.id.action_addPersonFragment_to_mainFragment)
             }
 
