@@ -36,6 +36,7 @@
 
     <EditText
         android:id="@+id/profile_edit_text"
+        android:text="@={profile.profileEditText}"
         android:textSize="12sp"
         android:background="@null"
         android:gravity="left"
