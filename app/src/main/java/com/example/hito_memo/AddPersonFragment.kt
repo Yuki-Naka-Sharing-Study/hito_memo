@@ -6,12 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hito_memo.databinding.FragmentAddPersonBinding
 
 class AddPersonFragment : Fragment() {
+
+    private val viewModel: UserViewModel by viewModels {
+        val userDao = UserAppDatabase.getUserAppDatabase(requireContext()).userDao()
+        UserViewModelFactory(UserRepository(userDao))
+    }
 
     private var _binding: FragmentAddPersonBinding? = null
     private val binding get() = _binding!!
@@ -34,6 +40,11 @@ class AddPersonFragment : Fragment() {
 
         val adapter = AddPersonAdapter(mList)
         binding.addPersonRecyclerView.adapter = adapter
+
+//        viewModel.nameOfUserFolder.observe(viewLifecycleOwner, Observer {
+////            binding.createdFolder.adapter = CreatedFolderAdapter(requireContext(), it.map { it.nameOfUserFolder })
+//            binding.addPersonRecyclerView.adapter = AddPersonAdapter(requireContext(), it.map { it.nameOfUser })
+//        })
 
         return binding.root
     }
@@ -203,6 +214,9 @@ class AddPersonFragment : Fragment() {
             navController.navigate(R.id.action_addPersonFragment_to_mainFragment)
         }
 
+        // 【町田さんからのアドバイス】
+        // AddPersonAdapter を修正して、textViewAddPerson の押下時に
+        // AddPersonItemXXXXBinding の EditText から文字列を取得できるようにする必要があります。
         binding.textViewAddPerson.setOnClickListener {
 
             if (binding.editTextMemoOfPerson.text.toString() == "") {
@@ -215,7 +229,6 @@ class AddPersonFragment : Fragment() {
                     .show(childFragmentManager, AddPersonDialog::class.simpleName)
 
             } else {
-
 
 
                 navController.navigate(R.id.action_addPersonFragment_to_mainFragment)

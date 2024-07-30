@@ -7,6 +7,10 @@ import com.example.hito_memo.databinding.AddPersonItemEditTextWithoutImageViewBi
 import com.example.hito_memo.databinding.AddPersonItemTextViewWithImageViewBinding
 import com.example.hito_memo.databinding.AddPersonItemTextViewWithoutImageViewBinding
 
+// 【町田さんからのアドバイス】
+// AddPersonAdapter を修正して、textViewAddPerson の押下時に
+// AddPersonItemXXXXBinding の EditText から文字列を取得できるようにする必要があります。
+
 const val ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW = 0
 const val ITEM_TEXT_VIEW_WITH_IMAGE_VIEW = 1
 const val ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW = 2
@@ -19,7 +23,13 @@ class AddPersonAdapter(private val mList: List<AddPersonDataItem>) :
 
         fun bindTextViewWithoutImageView(dataItem: AddPersonDataItem) {
             binding.profileTextView.text = dataItem.profileTextViewString
-            binding.profileEditText.setHint(dataItem.profileEditTextString)
+            // 以下、元々のコード
+//            binding.profileEditText.setHint(dataItem.profileEditTextString)
+
+            // 以下、AddPersonItemXXXXBinding の EditText から
+            // 文字列を取得できるようにするために書いてみたコード (合っているかは知らない。)
+            // 【懸念点】「nameOfUser」以外にも入れようとすると上手くいくのか？
+            UserEntity(nameOfUser = binding.profileEditText.setHint(dataItem.profileEditTextString).toString())
         }
     }
 
