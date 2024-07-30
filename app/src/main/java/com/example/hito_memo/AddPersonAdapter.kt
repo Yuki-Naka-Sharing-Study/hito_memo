@@ -29,7 +29,9 @@ class AddPersonAdapter(private val mList: List<AddPersonDataItem>) :
             // 以下、AddPersonItemXXXXBinding の EditText から
             // 文字列を取得できるようにするために書いてみたコード (合っているかは知らない。)
             // 【懸念点】「nameOfUser」以外にも入れようとすると上手くいくのか？
-            UserEntity(nameOfUser = binding.profileEditText.setHint(dataItem.profileEditTextString).toString())
+//            UserEntity(nameOfUser = binding.profileEditText.setHint(dataItem.profileEditTextString).toString())
+
+            binding.profileEditText.setHint(dataItem.profileEditTextHint)
         }
     }
 
@@ -37,8 +39,9 @@ class AddPersonAdapter(private val mList: List<AddPersonDataItem>) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bindTextViewWithImageView(dataItem: AddPersonDataItem) {
+            binding.profile = dataItem
             binding.profileTextView.text = dataItem.profileTextViewString
-            binding.profileEditText.setHint(dataItem.profileEditTextString)
+            binding.profileEditText.setHint(dataItem.profileEditTextHint)
             dataItem.profileImageViewInt?.let { binding.profileImageView.setImageResource(it) }
         }
     }
@@ -48,7 +51,7 @@ class AddPersonAdapter(private val mList: List<AddPersonDataItem>) :
 
         fun bindEditTextWithoutImageView(dataItem: AddPersonDataItem) {
             binding.customProfileEditText.setHint(dataItem.profileCustomEditTextString)
-            binding.profileEditText.setHint(dataItem.profileEditTextString)
+            binding.profileEditText.setHint(dataItem.profileEditTextHint)
         }
     }
 
