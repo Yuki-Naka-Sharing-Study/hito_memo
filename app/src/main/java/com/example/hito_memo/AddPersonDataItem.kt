@@ -6,6 +6,6 @@ data class AddPersonDataItem(
     var profileEditTextHint: String?,
     var profileCustomEditTextString: String?,
     var profileImageViewInt: Int?,
-    var profileEditTextString: String?
+    var profileEditText: String? = null,
 
 )
