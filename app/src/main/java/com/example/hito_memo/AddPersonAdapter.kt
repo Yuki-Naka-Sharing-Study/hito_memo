@@ -23,15 +23,15 @@ class AddPersonAdapter(private val mList: List<AddPersonDataItem>) :
 
         fun bindTextViewWithoutImageView(dataItem: AddPersonDataItem) {
             binding.profileTextView.text = dataItem.profileTextViewString
-            // 以下、元々のコード
-//            binding.profileEditText.setHint(dataItem.profileEditTextString)
-
-            // 以下、AddPersonItemXXXXBinding の EditText から
-            // 文字列を取得できるようにするために書いてみたコード (合っているかは知らない。)
-            // 【懸念点】「nameOfUser」以外にも入れようとすると上手くいくのか？
-//            UserEntity(nameOfUser = binding.profileEditText.setHint(dataItem.profileEditTextString).toString())
-
-            binding.profileEditText.setHint(dataItem.profileEditTextHint)
+            UserEntity(nameOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
+            UserEntity(furiganaOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
+            UserEntity(nicknameOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
+            UserEntity(birthdayOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
+            UserEntity(originOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
+            UserEntity(addressOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
+            UserEntity(occupationOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
+            UserEntity(relationshipOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
+            UserEntity(relationshipOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
         }
     }
 
