@@ -15,7 +15,7 @@ const val ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW = 0
 const val ITEM_TEXT_VIEW_WITH_IMAGE_VIEW = 1
 const val ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW = 2
 
-class AddPersonAdapter(private val mList: List<AddPersonDataItem>) :
+class AddPersonAdapter(private val addPersonDataItemArrayList: List<AddPersonDataItem>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     inner class ItemTextViewWithoutImageViewHolder(private val binding: AddPersonItemTextViewWithoutImageViewBinding) :
@@ -57,9 +57,9 @@ class AddPersonAdapter(private val mList: List<AddPersonDataItem>) :
 
     override fun getItemViewType(position: Int): Int {
 
-        return if (mList[position].profileImageViewInt != null) {
+        return if (addPersonDataItemArrayList[position].profileImageViewInt != null) {
             ITEM_TEXT_VIEW_WITH_IMAGE_VIEW
-        } else if (mList[position].profileTextViewString != null) {
+        } else if (addPersonDataItemArrayList[position].profileTextViewString != null) {
             ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW
         } else {
             ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW
@@ -83,22 +83,22 @@ class AddPersonAdapter(private val mList: List<AddPersonDataItem>) :
     }
 
     override fun getItemCount(): Int {
-        return mList.size
+        return addPersonDataItemArrayList.size
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
 
         if (getItemViewType(position) == ITEM_TEXT_VIEW_WITHOUT_IMAGE_VIEW) {
 
-            (holder as ItemTextViewWithoutImageViewHolder).bindTextViewWithoutImageView(mList[position])
+            (holder as ItemTextViewWithoutImageViewHolder).bindTextViewWithoutImageView(addPersonDataItemArrayList[position])
 
         } else if (getItemViewType(position) == ITEM_TEXT_VIEW_WITH_IMAGE_VIEW) {
 
-            (holder as ItemTextViewWithImageViewHolder).bindTextViewWithImageView(mList[position])
+            (holder as ItemTextViewWithImageViewHolder).bindTextViewWithImageView(addPersonDataItemArrayList[position])
 
         } else if (getItemViewType(position) == ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW) {
 
-            (holder as ItemEditTextWithoutImageViewHolder).bindEditTextWithoutImageView(mList[position])
+            (holder as ItemEditTextWithoutImageViewHolder).bindEditTextWithoutImageView(addPersonDataItemArrayList[position])
 
         }
     }

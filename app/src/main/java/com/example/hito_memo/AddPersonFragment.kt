@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,7 +22,7 @@ class AddPersonFragment : Fragment() {
 
     private var _binding: FragmentAddPersonBinding? = null
     private val binding get() = _binding!!
-    private lateinit var mList: ArrayList<AddPersonDataItem>
+    private lateinit var addPersonDataItemArrayList: ArrayList<AddPersonDataItem>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,23 +36,22 @@ class AddPersonFragment : Fragment() {
         val itemDecoration = DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
         binding.addPersonRecyclerView.addItemDecoration(itemDecoration)
 
-        mList = ArrayList()
+        addPersonDataItemArrayList = ArrayList()
         prepareData()
 
-        val adapter = AddPersonAdapter(mList)
+        val adapter = AddPersonAdapter(addPersonDataItemArrayList)
         binding.addPersonRecyclerView.adapter = adapter
 
-//        viewModel.nameOfUserFolder.observe(viewLifecycleOwner, Observer {
-////            binding.createdFolder.adapter = CreatedFolderAdapter(requireContext(), it.map { it.nameOfUserFolder })
-//            binding.addPersonRecyclerView.adapter = AddPersonAdapter(requireContext(), it.map { it.nameOfUser })
-//        })
+        viewModel.nameOfUserFolder.observe(viewLifecycleOwner, Observer {
+            binding.addPersonRecyclerView.adapter = AddPersonAdapter(addPersonDataItemArrayList)
+        })
 
         return binding.root
     }
 
     private fun prepareData() {
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "名前",
                 "田中太郎",
@@ -60,7 +60,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "フリガナ",
                 "タナカタロウ",
@@ -69,7 +69,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "ニックネーム",
                 "たろちゃん",
@@ -78,7 +78,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "性別",
                 "未選択",
@@ -87,7 +87,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "誕生日",
                 "2000年1月1日",
@@ -96,7 +96,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "出身地",
                 "秋田県",
@@ -105,7 +105,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "住所",
                 "東京都",
@@ -114,7 +114,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "職業",
                 "エンジニア",
@@ -123,7 +123,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "関係",
                 "会社の同僚",
@@ -132,7 +132,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "電話番号",
                 "080-1234-1234",
@@ -141,7 +141,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "Email",
                 "taro@example.com",
@@ -150,7 +150,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "X(旧Twitter)",
                 "@tanakataro",
@@ -159,7 +159,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "Instagram",
                 "@tanakataro",
@@ -168,7 +168,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 "Facebook",
                 "@tanakataro",
@@ -177,7 +177,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 null,
                 "内容",
@@ -186,7 +186,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 null,
                 "内容",
@@ -195,7 +195,7 @@ class AddPersonFragment : Fragment() {
             )
         )
 
-        mList.add(
+        addPersonDataItemArrayList.add(
             AddPersonDataItem(
                 null,
                 "内容",
