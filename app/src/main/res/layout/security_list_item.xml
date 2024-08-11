@@ -20,6 +20,7 @@
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/security_item_toggle_button"
+        android:thumbTint="#00ff00"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
