@@ -40,7 +40,12 @@ class SecurityAdapter(private val context: Context, private val dataSource: List
         val securityItem = getItem(position) as String
         binding.securityItemTextView.text = securityItem
         val switchCompat = binding.securityItemToggleButton
-        switchCompat.thumbTintList = ContextCompat.getColorStateList(context, R.color.switchColor)
+        switchCompat.thumbTintList = ContextCompat.getColorStateList(context, R.color.switchOffColor)
+
+        switchCompat.setOnCheckedChangeListener { _, isChecked ->
+            val colorRes = if (isChecked) R.color.switchOnColor else R.color.switchOffColor
+            switchCompat.thumbTintList = ContextCompat.getColorStateList(context, colorRes)
+        }
 
         binding.securityItemToggleButton.setOnClickListener {
             // ボタンがクリックされたときの動作をここに追加

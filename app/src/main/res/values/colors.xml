@@ -6,5 +6,6 @@
     <color name="blue_or_light_blue">#4169e1</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#dcdcdc</color>
-    <color name="switchColor">#00ff00</color>
+    <color name="switchOnColor">#00ff00</color>
+    <color name="switchOffColor">#dcdcdc</color>
 </resources>
