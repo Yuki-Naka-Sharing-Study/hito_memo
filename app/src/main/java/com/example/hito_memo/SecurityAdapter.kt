@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import androidx.core.content.ContextCompat
 import com.example.hito_memo.databinding.SecurityListItemBinding
 
 class SecurityAdapter(private val context: Context, private val dataSource: List<String>) : BaseAdapter() {
@@ -38,6 +39,8 @@ class SecurityAdapter(private val context: Context, private val dataSource: List
 
         val securityItem = getItem(position) as String
         binding.securityItemTextView.text = securityItem
+        val switchCompat = binding.securityItemToggleButton
+        switchCompat.thumbTintList = ContextCompat.getColorStateList(context, R.color.switchColor)
 
         binding.securityItemToggleButton.setOnClickListener {
             // ボタンがクリックされたときの動作をここに追加
