@@ -18,11 +18,15 @@ const val ITEM_EDIT_TEXT_WITHOUT_IMAGE_VIEW = 2
 class AddPersonAdapter(private val addPersonDataItemArrayList: List<AddPersonDataItem>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
+    // 「NewFolderFragment」のコードを参考にしてみる。
     inner class ItemTextViewWithoutImageViewHolder(private val binding: AddPersonItemTextViewWithoutImageViewBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+
+
         fun bindTextViewWithoutImageView(dataItem: AddPersonDataItem) {
             binding.profileTextView.text = dataItem.profileTextViewString
+
             UserEntity(nameOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
             UserEntity(furiganaOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
             UserEntity(nicknameOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
@@ -30,7 +34,6 @@ class AddPersonAdapter(private val addPersonDataItemArrayList: List<AddPersonDat
             UserEntity(originOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
             UserEntity(addressOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
             UserEntity(occupationOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
-            UserEntity(relationshipOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
             UserEntity(relationshipOfUser = binding.profileEditText.setHint(dataItem.profileEditTextHint).toString())
         }
     }

@@ -57,9 +57,6 @@ class NewFolderFragment : Fragment() {
                             )
                         }
                     }
-
-
-
                 }
 
                 navController.navigate(R.id.action_newFolderFragment_to_mainFragment)
