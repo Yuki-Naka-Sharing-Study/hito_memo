@@ -3,7 +3,8 @@
     <data>
         <variable
             name="profile"
-            type="com.example.hito_memo.AddPersonDataItem" />
+            type="com.example.hito_memo.AddPersonDataItem"
+            />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

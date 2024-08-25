@@ -37,7 +37,7 @@ class CreatedFolderAdapter(private val context: Context, private val dataSource:
         }
 
         val createdFolderItem = getItem(position) as String
-        binding.eachFolderTextView.text = createdFolderItem
+        binding.eachFolderPersonNameTextView.text = createdFolderItem
 
         return view
     }
